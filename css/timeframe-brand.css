@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "Outward Border";
-    src: url("./assets/fonts/outward-borders-webfont.woff2") format("woff2");
-}
-
 body {
     background: gray;
     margin: 2rem;
@@ -11,9 +6,9 @@ body {
 
 h1 {
     position: relative;
-    font-family: "Outward Border";
+    font-family: "Retro Gaming";
     color: #4E4BF0;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     top: -0.5rem;
 }
@@ -45,11 +40,6 @@ h4 {
 
 img {
     width: 10%;
-}
-
-i:hover {
-    -webkit-text-stroke-width: 4px;
-    -webkit-text-stroke-color: #97958C;
 }
 
 #circles {
@@ -97,13 +87,3 @@ i:hover {
     border: 0.3rem solid #CDB805;
 }
 
-i {
-    position: relative;
-    top: 13rem;
-}
-
-#fornow {
-    position: relative;
-    top: 13rem;
-    align-items: right;
-}

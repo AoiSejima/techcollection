@@ -94,9 +94,5 @@ function showTechs() {
         let techImage = document.createElement("img");
         techImage.src = tech.fields.img[0].url;
         document.querySelector(".container").append(techImage);
-
-
-
-
 });
 }

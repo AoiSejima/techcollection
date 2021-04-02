@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "Outward Border";
-    src: url("./assets/fonts/outward-borders-webfont.woff2") format("woff2");
-}
-
 body {
     background: #D0CFCA;
     margin: 2rem;
@@ -10,9 +5,9 @@ body {
 
 h1 {
     position: relative;
-    font-family: "Outward Border";
+    font-family: "Retro Gaming";
     color: #4E4BF0;
-    font-size: 6rem;
+    font-size: 3rem;
     text-align: right;
     top: -0.5rem;
 }
