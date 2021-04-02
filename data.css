@@ -4,16 +4,17 @@
 }
 
 body {
-    background: #D0CFCA;
+    background: gray;
     margin: 2rem;
+    font-family: "Retro Gaming";
 }
 
 h1 {
     position: relative;
     font-family: "Outward Border";
     color: #4E4BF0;
-    font-size: 6rem;
-    text-align: right;
+    font-size: 4rem;
+    text-align: center;
     top: -0.5rem;
 }
 
@@ -28,17 +29,22 @@ h2 {
 }
 
 h3 {
-    position: relative;
-    font-family: "Pixeled";
-    font-size: 2rem;
     color: white;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #898989;
-    text-align: left;
-    line-height: 3rem;
-    text-align: center;
-    top: 2rem;
-    z-index: 1;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+}
+
+h3:hover {
+    color: #F0A71D;
+}
+
+h4 {
+    color: black;
+    font-size: 1.5rem;
+}
+
+img {
+    width: 10%;
 }
 
 i:hover {
@@ -47,46 +53,48 @@ i:hover {
 }
 
 #circles {
-    position: relative;
-    width: 30%;
-    align-items: center;
+    position: absolute;
+    width: 5%;
+    transform: rotate(45deg);
+    top: 3rem;
+    right: 2rem;
     z-index: 1;
 }
 
 #greenCircle {
-    width: 15rem;
-    height: 15rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     display: inline-block;
     background: #86D38F;
-    border: 0.5rem solid #69B972;
+    border: 0.3rem solid #69B972;
 }
 
 #redCircle {
-    width: 15rem;
-    height: 15rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     display: inline-block;
     background: #E35748;
-    border: 0.5rem solid #B63D30;
+    border: 0.3rem solid #B63D30;
 }
 
 #blueCircle {
-    width: 15rem;
-    height: 15rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     display: inline-block;
     background: #518DD3;
-    border: 0.5rem solid #3D75B6;
+    border: 0.3rem solid #3D75B6;
 }
 
 #yellowCircle {
-    width: 15rem;
-    height: 15rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     display: inline-block;
     background: #FEE615;
-    border: 0.5rem solid #CDB805;
+    border: 0.3rem solid #CDB805;
 }
 
 i {
@@ -96,6 +104,6 @@ i {
 
 #fornow {
     position: relative;
-    left: 10rem;
+    top: 13rem;
     align-items: right;
 }
