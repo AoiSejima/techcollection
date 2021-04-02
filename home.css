@@ -1,0 +1,94 @@
+@font-face {
+    font-family: "Outward Border";
+    src: url("./assets/fonts/outward-borders-webfont.woff2") format("woff2");
+}
+
+body {
+    background: #D0CFCA;
+    margin: 2rem;
+    font-family: "Pixeled";
+}
+
+h1 {
+    position: relative;
+    font-family: "Outward Border";
+    color: #4E4BF0;
+    font-size: 6rem;
+    text-align: right;
+    top: -0.5rem;
+}
+
+h2 {
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    text-align: left;
+    line-height: 3rem;
+    top: 1rem;
+}
+
+h3 {
+    position: relative;
+    font-size: 2rem;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #898989;
+    text-align: left;
+    line-height: 3rem;
+    text-align: center;
+    top: 2rem;
+    z-index: 1;
+}
+
+i {
+    position: relative;
+    top: 18rem;
+}
+
+i:hover {
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #97958C;
+}
+
+#circle {
+    position: relative;
+    width: 50%;
+    align-items: center;
+    z-index: 1;
+}
+
+#greenCircle {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #86D38F;
+    border: 0.5rem solid #69B972;
+}
+
+#redCircle {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #E35748;
+    border: 0.5rem solid #B63D30;
+}
+
+#blueCircle {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #518DD3;
+    border: 0.5rem solid #3D75B6;
+}
+
+#yellowCircle {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #FEE615;
+    border: 0.5rem solid #CDB805;
+}
