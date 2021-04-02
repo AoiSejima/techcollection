@@ -61,9 +61,9 @@ function showTechs() {
         // techTitle.innerText = tech.fields.title;
         // document.body.appendChild(techTitle);
 
-        let techYear = document.createElement("h3");
-        techYear.innerText = tech.fields.year;
-        document.body.appendChild(techYear);
+        let techSize = document.createElement("h3");
+        techSize.innerText = tech.fields.size;
+        document.body.appendChild(techSize);
 
         let techBrand = document.createElement("h3");
         techBrand.innerText = tech.fields.brand;

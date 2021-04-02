@@ -65,9 +65,9 @@ function showTechs() {
         techYear.innerText = tech.fields.year;
         document.body.appendChild(techYear);
 
-        let techBrand = document.createElement("h3");
-        techBrand.innerText = tech.fields.brand;
-        document.body.appendChild(techBrand);
+        let techType = document.createElement("h3");
+        techType.innerText = tech.fields.type;
+        document.body.appendChild(techType);
 
         let techImage = document.createElement("img");
         techImage.src = tech.fields.img[0].url;

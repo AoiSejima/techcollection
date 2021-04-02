@@ -61,13 +61,13 @@ function showTechs() {
         // techTitle.innerText = tech.fields.title;
         // document.body.appendChild(techTitle);
 
-        let techYear = document.createElement("h3");
-        techYear.innerText = tech.fields.year;
-        document.body.appendChild(techYear);
+        let techType = document.createElement("h3");
+        techType.innerText = tech.fields.type;
+        document.body.appendChild(techType);
 
-        let techBrand = document.createElement("h3");
-        techBrand.innerText = tech.fields.brand;
-        document.body.appendChild(techBrand);
+        let techSize = document.createElement("h3");
+        techSize.innerText = tech.fields.size;
+        document.body.appendChild(techSize);
 
         let techImage = document.createElement("img");
         techImage.src = tech.fields.img[0].url;
