@@ -1,96 +1,164 @@
 body {
-    background: #D0CFCA;
-    margin: 2rem;
+    /* background: #D0CFCA; */
+    background: #acd3ec;
+    margin: 0 auto;
+}
+
+nav {
+    font-family: "Retro Gaming";
+    margin: -1rem 1rem auto -1.5rem;
+    z-index: 2;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li {
+    display: inline-block;
 }
 
 h1 {
-    position: relative;
-    font-family: "Retro Gaming";
     color: #4E4BF0;
     font-size: 3rem;
+    line-height: 3rem;
     text-align: right;
-    top: -0.5rem;
 }
 
 h2 {
-    position: absolute;
-    font-family: "Retro Gaming";
     color: white;
     font-size: 2rem;
     text-align: left;
-    line-height: 3rem;
-    top: 1rem;
+    line-height: 2rem;
+    margin-right: 70rem;
 }
 
 h3 {
     position: relative;
     font-family: "Pixeled";
-    font-size: 2rem;
     color: white;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #898989;
-    text-align: left;
-    line-height: 3rem;
+    font-size: 2.5rem;    
+    line-height: 4rem;
+    white-space: pre-wrap;
     text-align: center;
     top: 2rem;
-    z-index: 1;
-}
-
-i:hover {
-    -webkit-text-stroke-width: 4px;
-    -webkit-text-stroke-color: #97958C;
+    left: 0.3rem;
 }
 
 #circles {
     position: relative;
+    margin-top: -2rem;
+    margin-left: 35rem;
     width: 30%;
-    align-items: center;
-    z-index: 1;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    transform: rotate(45deg);
+    z-index: 2;
 }
 
 #greenCircle {
-    width: 15rem;
-    height: 15rem;
+    width: 18rem;
+    height: 18rem;
     border-radius: 50%;
     display: inline-block;
     background: #86D38F;
     border: 0.5rem solid #69B972;
+    transform: rotate(-45deg);
 }
 
 #redCircle {
-    width: 15rem;
-    height: 15rem;
+    width: 18rem;
+    height: 18rem;
     border-radius: 50%;
     display: inline-block;
     background: #E35748;
     border: 0.5rem solid #B63D30;
+    transform: rotate(-45deg);
+    white-space: pre-wrap;
 }
 
 #blueCircle {
-    width: 15rem;
-    height: 15rem;
+    width: 18rem;
+    height: 18rem;
     border-radius: 50%;
     display: inline-block;
     background: #518DD3;
     border: 0.5rem solid #3D75B6;
+    transform: rotate(-45deg);
+    white-space: pre-wrap;
 }
 
 #yellowCircle {
-    width: 15rem;
-    height: 15rem;
+    width: 18rem;
+    height: 18rem;
     border-radius: 50%;
     display: inline-block;
     background: #FEE615;
     border: 0.5rem solid #CDB805;
+    transform: rotate(-45deg);
+    white-space: pre-wrap;
 }
 
-i {
-    position: relative;
-    top: 13rem;
+#home-button {
+    position: absolute;
+    width: 8%;
+    align-items: center;
+    margin: -22rem auto auto 50rem;
 }
+
+#animation-container {
+    position: relative;
+    z-index: 1;
+}
+
+#cloud-one-animation {
+    animation: go-left-right 7s linear 1s infinite;
+    position: absolute;
+    width: 20%;
+    top: -7rem;
+}
+
+@keyframes go-left-right { 
+    from { left: -25rem; }
+    to { left: calc(100% - -5rem); }
+}
+
+#cloud-two-animation {
+    animation: go-right-left 10s linear 1s infinite;
+    position: absolute;
+    width: 20%;
+    top: -13rem;
+}
+
+@keyframes go-right-left { 
+    from { left: -25rem; }
+    to { left: calc(100% - -5rem); }
+}
+
+#cloud-three-animation {
+    animation: go-right-left 15s linear 1s infinite;
+    position: absolute;
+    width: 30%;
+    top: -7rem;
+}
+
+@keyframes go-right-left { 
+    from { left: -25rem; }
+    to { left: calc(100% - -5rem); }
+}
+
 
 #fornow {
-    position: relative;
-    left: 10rem;
-    align-items: right;
+    position: absolute;
+    font-size: 1.5rem;
+    top: 50rem;
+    left: 15rem;
+    display: grid;
+    grid-template-columns: 1, 1fr;
 }

@@ -56,35 +56,62 @@ function showTechs() {
         // h3.innerText = tech.fields.year;
         // document.body.appendChild(h3);  
 
-
         // let techTitle = document.createElement("h3");
         // techTitle.innerText = tech.fields.title;
         // document.body.appendChild(techTitle);
 
-        let techSize = document.createElement("h3");
-        techSize.innerText = tech.fields.size;
-        document.body.appendChild(techSize);
+        // creating a new div container for brand
+        let brandContainer = document.createElement("div");
+        brandContainer.classList.add("brand-container");
+        document.querySelector(".js-brand-container").appendChild(brandContainer);
 
         let techBrand = document.createElement("h3");
+        techBrand.classList.add("tech-brand");
         techBrand.innerText = tech.fields.brand;
-        document.body.appendChild(techBrand);
+        brandContainer.appendChild(techBrand);
+
+        // creating a new div container for image
+        let imageContainer = document.createElement("div");
+        imageContainer.classList.add("image-container");
+        document.querySelector(".js-image-container").appendChild(imageContainer);
 
         let techImage = document.createElement("img");
+        techImage.classList.add("tech-image");
         techImage.src = tech.fields.img[0].url;
-        document.body.appendChild(techImage);
+        imageContainer.appendChild(techImage);
 
 
-        // let techYear = document.createElement("h4");
-        // // techYear.classList.add("year")
-        // techYear.innerText = tech.fields.year;
-        // document.querySelector(".years").appendChild(techYear);
+        // add event listener when user clicks on each brand name
+        // other elements will appear or disappear
+        brandContainer.addEventListener("click", function(){
+            // toggle = light switch
+            techBrand.classList.toggle("active");
+            techImage.classList.toggle("active");
+        });
 
-        // let techBrand = document.createElement("h3");
-        // techBrand.innerText = tech.fields.brand;
-        // document.querySelector(".brands").appendChild(techBrand);
+        // get genre field from airtable, 
+        // loop through the array and add each genre as a class to the song container
+        let gemColor = tech.fields.color;
+        gemColor.forEach(function(color){
+            gemContainer.classList.add(color)
+        });
 
-        // let techImage = document.createElement("img");
-        // techImage.src = tech.fields.img[0].url;
-        // document.querySelector(".container").append(techImage);
+        // add event listener to filter (to add an active class to gems)
+        let filterRed = document.querySelector(".js-red");
+        filterRed.addEventListener("click", function(){
+
+            if (gemContainer.classList.contains("red")) {
+                gemContainer.style.display = "block";
+            } else {
+                gemContainer.style.display = "none";
+            }
+        });
+
+
+
+        // let techSize = document.createElement("h3");
+        // techSize.classList.add("tech-size");
+        // techSize.innerText = tech.fields.size;
+        // techContainer.appendChild(techSize);
 });
 }

@@ -1,26 +1,81 @@
 body {
     background: gray;
-    margin: 2rem;
+    margin: 0 auto;
     font-family: "Retro Gaming";
+}
+
+nav {
+    margin: -1rem 1rem auto -2rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li {
+    display: inline-block;
 }
 
 h1 {
-    position: relative;
-    font-family: "Retro Gaming";
     color: #4E4BF0;
     font-size: 3rem;
     text-align: center;
-    top: -0.5rem;
+    margin-left: 30rem;
+    margin-right: 30rem;
 }
 
 h2 {
-    position: absolute;
-    font-family: "Retro Gaming";
     color: white;
     font-size: 2rem;
-    text-align: left;
     line-height: 3rem;
-    top: 1rem;
+    text-align: left;
+}
+
+#circles {
+    height: 1%;
+    transform: rotate(45deg);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+}
+
+#greenCircle {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #86D38F;
+    border: 0.3rem solid #69B972;
+}
+
+#redCircle {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #E35748;
+    border: 0.3rem solid #B63D30;
+}
+
+#blueCircle {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #518DD3;
+    border: 0.3rem solid #3D75B6;
+}
+
+#yellowCircle {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #FEE615;
+    border: 0.3rem solid #CDB805;
 }
 
 h3 {
@@ -31,6 +86,7 @@ h3 {
 
 h3:hover {
     color: #F0A71D;
+    transition: all 0.2s ease-in-out;
 }
 
 h4 {
@@ -38,52 +94,133 @@ h4 {
     font-size: 1.5rem;
 }
 
+
+
+
+span {
+    display: block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.js-type-filter  {
+    position: fixed;
+    margin-top: 3rem;
+    margin-left: -26.7rem;
+    font-size: 2rem;
+}
+
+.js-tech-container {
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem;
+    margin: auto;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    text-align: center;
+}
+
+.tech-container {
+    width: 100%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.tech-container:hover {
+    box-shadow: 0px 0px 80px rgb(255, 255, 255);
+    transition: all 0.2s ease-in-out;
+}
+
+img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.tech-brand {
+    display: none;
+}
+
+.tech-brand.active {
+    display: block;
+}
+
+.tech-image {
+    display: none;
+}
+
+.tech-image.active {
+    display: block;
+}
+
+
+@media only screen and (max-width: 812px) {  
+    
+}
+
+
+
+
+
+/* .js-brand-container {
+    width: 17%;
+    border: 5px solid black;
+    border-radius: 5px;
+    margin-left: 3rem;
+}
+
+.js-brand-container.active {
+    display: block;
+}
+
+.js-image-container {
+    width: 65%;
+    height: 50%;
+    margin-left: 31rem;
+    margin-top: -308rem;
+    border: 5px solid red;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: unset;
+}
+
+.js-image-container.active {
+    display: block;
+} */
+
+/* 
+.js-tech-container {
+    width: 17%;
+    border: 5px solid black;
+    border-radius: 5px;
+    margin-left: 3rem;
+}
+
+.js-type-filter {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    word-spacing: 3rem;
+}
+
 img {
     width: 10%;
+    display: none;
 }
 
-#circles {
-    position: absolute;
-    width: 5%;
-    transform: rotate(45deg);
-    top: 3rem;
-    right: 2rem;
-    z-index: 1;
+img.active {
+    display: block;
 }
 
-#greenCircle {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #86D38F;
-    border: 0.3rem solid #69B972;
+.js-brand {
+    display: none;
 }
 
-#redCircle {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #E35748;
-    border: 0.3rem solid #B63D30;
-}
-
-#blueCircle {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #518DD3;
-    border: 0.3rem solid #3D75B6;
-}
-
-#yellowCircle {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #FEE615;
-    border: 0.3rem solid #CDB805;
-}
-
+.js-brand.active {
+    display: block;
+} */

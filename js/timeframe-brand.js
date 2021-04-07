@@ -61,17 +61,43 @@ function showTechs() {
         // techTitle.innerText = tech.fields.title;
         // document.body.appendChild(techTitle);
 
-        let techYear = document.createElement("h3");
-        techYear.innerText = tech.fields.year;
-        document.body.appendChild(techYear);
+        // creating a new div container for ALL
+        let techContainer = document.createElement("div");
+        techContainer.classList.add("tech-container");
+        document.querySelector(".js-tech-container").appendChild(techContainer);
 
+        // creating a new div container for BRAND
+        let brandContainer = document.createElement("div");
+        brandContainer.classList.add("brand-container");
+        document.querySelector(".js-brand-container").appendChild(brandContainer);
+        
         let techBrand = document.createElement("h3");
+        techBrand.classList.add("tech-brand");
         techBrand.innerText = tech.fields.brand;
-        document.body.appendChild(techBrand);
+        brandContainer.appendChild(techBrand);
+
+        // creating a new div container for IMAGE
+        let imageContainer = document.createElement("div");
+        imageContainer.classList.add("image-container");
+        document.querySelector(".js-image-container").appendChild(imageContainer);
 
         let techImage = document.createElement("img");
+        techImage.classList.add("tech-image");
         techImage.src = tech.fields.img[0].url;
-        document.body.appendChild(techImage);
+        imageContainer.appendChild(techImage);
+
+
+        // let techYear = document.createElement("h3");
+        // techYear.innerText = tech.fields.year;
+        // document.body.appendChild(techYear);
+
+        // let techBrand = document.createElement("h3");
+        // techBrand.innerText = tech.fields.brand;
+        // document.body.appendChild(techBrand);
+
+        // let techImage = document.createElement("img");
+        // techImage.src = tech.fields.img[0].url;
+        // document.body.appendChild(techImage);
 
 
         // let techYear = document.createElement("h4");

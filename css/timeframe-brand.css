@@ -1,26 +1,81 @@
 body {
     background: gray;
-    margin: 2rem;
+    margin: 0 auto;
     font-family: "Retro Gaming";
+}
+
+nav {
+    margin: -1rem 1rem auto -2rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li {
+    display: inline-block;
 }
 
 h1 {
-    position: relative;
-    font-family: "Retro Gaming";
     color: #4E4BF0;
     font-size: 3rem;
     text-align: center;
-    top: -0.5rem;
+    margin-left: 30rem;
+    margin-right: 30rem;
 }
 
 h2 {
-    position: absolute;
-    font-family: "Retro Gaming";
     color: white;
     font-size: 2rem;
-    text-align: left;
     line-height: 3rem;
-    top: 1rem;
+    text-align: left;
+}
+
+#circles {
+    height: 1%;
+    transform: rotate(45deg);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+}
+
+#greenCircle {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #86D38F;
+    border: 0.3rem solid #69B972;
+}
+
+#redCircle {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #E35748;
+    border: 0.3rem solid #B63D30;
+}
+
+#blueCircle {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #518DD3;
+    border: 0.3rem solid #3D75B6;
+}
+
+#yellowCircle {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #FEE615;
+    border: 0.3rem solid #CDB805;
 }
 
 h3 {
@@ -31,6 +86,7 @@ h3 {
 
 h3:hover {
     color: #F0A71D;
+    transition: all 0.2s ease-in-out;
 }
 
 h4 {
@@ -38,52 +94,33 @@ h4 {
     font-size: 1.5rem;
 }
 
+.js-brand-container {
+    width: 17%;
+    border: 5px solid black;
+    border-radius: 5px;
+    margin-left: 3rem;
+}
+
+/* .js-brand-container.active {
+    display: block;
+} */
+
 img {
-    width: 10%;
+    width: 50%;
 }
 
-#circles {
-    position: absolute;
-    width: 5%;
-    transform: rotate(45deg);
-    top: 3rem;
-    right: 2rem;
-    z-index: 1;
+.js-image-container {
+    width: 65%;
+    height: 50%;
+    margin-left: 31rem;
+    margin-top: -308rem;
+    border: 5px solid red;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: unset;
 }
 
-#greenCircle {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #86D38F;
-    border: 0.3rem solid #69B972;
-}
-
-#redCircle {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #E35748;
-    border: 0.3rem solid #B63D30;
-}
-
-#blueCircle {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #518DD3;
-    border: 0.3rem solid #3D75B6;
-}
-
-#yellowCircle {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #FEE615;
-    border: 0.3rem solid #CDB805;
-}
-
+/* .js-image-container.active {
+    display: block;
+} */

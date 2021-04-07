@@ -56,35 +56,79 @@ function showTechs() {
         // h3.innerText = tech.fields.year;
         // document.body.appendChild(h3);  
 
-
         // let techTitle = document.createElement("h3");
         // techTitle.innerText = tech.fields.title;
         // document.body.appendChild(techTitle);
 
-        let techType = document.createElement("h3");
-        techType.innerText = tech.fields.type;
-        document.body.appendChild(techType);
 
+        // creating a new div container for all content
+        let techContainer = document.createElement("div");
+        techContainer.classList.add("tech-container");
+        document.querySelector(".js-tech-container").appendChild(techContainer);
+
+        // creating a new div container for brand
+        let brandContainer = document.createElement("div");
+        brandContainer.classList.add("brand-container");
+        document.querySelector(".js-brand-container").appendChild(brandContainer);
+        
         let techBrand = document.createElement("h3");
+        techBrand.classList.add("tech-brand");
         techBrand.innerText = tech.fields.brand;
-        document.body.appendChild(techBrand);
+        techContainer.appendChild(techBrand);
+
+
+        // creating a new div container for image
+        let imageContainer = document.createElement("div");
+        imageContainer.classList.add("image-container");
+        document.querySelector(".js-image-container").appendChild(imageContainer);
 
         let techImage = document.createElement("img");
+        techImage.classList.add("tech-image");
         techImage.src = tech.fields.img[0].url;
-        document.body.appendChild(techImage);
+        imageContainer.appendChild(techImage);
 
 
-        // let techYear = document.createElement("h4");
-        // // techYear.classList.add("year")
-        // techYear.innerText = tech.fields.year;
-        // document.querySelector(".years").appendChild(techYear);
 
-        // let techBrand = document.createElement("h3");
-        // techBrand.innerText = tech.fields.brand;
-        // document.querySelector(".brands").appendChild(techBrand);
 
-        // let techImage = document.createElement("img");
-        // techImage.src = tech.fields.img[0].url;
-        // document.querySelector(".container").append(techImage);
+
+
+        // // add event listener when user clicks on each type
+        // // other elements will appear or disappear
+        // techContainer.addEventListener("click", function(){
+        //     // toggle = light switch
+        //     techBrand.classList.toggle("active");
+        //     techImage.classList.toggle("active");
+        // });
+
+        // // get genre field from airtable, 
+        // // loop through the array and add each genre as a class to the song container
+        // let tech = tech.fields.type;
+        // gemType.forEach(function(type){
+        //     techContainer.classList.add(type)
+        // });
+
+        // add event listener to filter (to add an active class to gems)
+        // let filterPhone = document.querySelector(".js-phone");
+        // filterPhone.addEventListener("click", function(){
+
+        //     if (techContainer.classList.contains("phone")) {
+        //         techContainer.style.display = "block";
+        //     } else {
+        //         techContainer.style.display = "none";
+        //     }
+        // });
+
+        // let filterTablet = document.querySelector(".js-tablet");
+        // filterTablet.addEventListener("click", function(){
+
+        //     if (techContainer.classList.contains("tablet")) {
+        //         techContainer.style.display = "block";
+        //     } else {
+        //         techContainer.style.display = "none";
+        //     }
+        // });
+
+
+
 });
 }
