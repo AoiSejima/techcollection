@@ -37,7 +37,12 @@ function gotAllTechs(err) {
   
     // call functions to log and show the techs
     consoleLogTechs();
-    showTechs();
+
+    try {
+        showTechs();
+    } catch (e) {
+        console.error(e);
+    }
 };
 
 // just loop through the techs and console.log them
@@ -56,29 +61,161 @@ function showTechs() {
         // techTitle.innerText = tech.fields.title;
         // document.body.appendChild(techTitle);
 
-        // let techYear = document.createElement("h3");
-        // techYear.innerText = tech.fields.year;
-        // document.body.appendChild(techYear);
-
-        // creating a new div container for ALL
+        // creating a new div container for EACH tech item
+        // haven't added to the page yet by appending
         let techContainer = document.createElement("div");
         techContainer.classList.add("tech-container");
-        document.querySelector(".js-tech-container").appendChild(techContainer);
 
-        // creating a new div container for IMAGE
-        let imageContainer = document.createElement("div");
-        imageContainer.classList.add("image-container");
-        document.querySelector(".js-image-container").appendChild(imageContainer);
-
+        // creating a new tech-img elemtnt
         let techImage = document.createElement("img");
         techImage.classList.add("tech-image");
         techImage.src = tech.fields.img[0].url;
-        document.body.appendChild(techImage);
+        // adding the image to the tech container
+        techContainer.appendChild(techImage);
 
-        // // creating a new div container for TYPE
-        // let techType = document.createElement("h3");
-        // techType.classList.add("tech-type");
-        // techType.innerText = tech.fields.type;
-        // document.querySelector(".js-type-filter").appendChild(typeContainer);
+        let techYear = tech.fields.year;
+
+        let techType = tech.fields.type;
+
+        // adding techType as a class to each tech container
+        // clicking amazon would only add amazon products to the container
+        techContainer.classList.add(techType);
+
+        if (techYear == '1964') {
+            document.querySelector(".y_1964").appendChild(techContainer);
+        }
+        if (techYear == '1983') {
+            document.querySelector(".y_1983").appendChild(techContainer);
+        }
+        if (techYear == '1984') {
+            document.querySelector(".y_1984").appendChild(techContainer);
+        }
+        if (techYear == '1985') {
+            document.querySelector(".y_1985").appendChild(techContainer);
+        }
+        if (techYear == '1991') {
+            document.querySelector(".y_1991").appendChild(techContainer);
+        }
+        if (techYear == '1994') {
+            document.querySelector(".y_1994").appendChild(techContainer);
+        }
+        if (techYear == '2004') {
+            document.querySelector(".y_2004").appendChild(techContainer);
+        }
+        if (techYear == '2006') {
+            document.querySelector(".y_2006").appendChild(techContainer);
+        }
+        if (techYear == '2007') {
+            document.querySelector(".y_2007").appendChild(techContainer);
+        }
+        if (techYear == '2010') {
+            document.querySelector(".y_2010").appendChild(techContainer);
+        }
+        if (techYear == '2012') {
+            document.querySelector(".y_2012").appendChild(techContainer);
+        }
+        if (techYear == '2013') {
+            document.querySelector(".y_2013").appendChild(techContainer);
+        }
+        if (techYear == '2014') {
+            document.querySelector(".y_2014").appendChild(techContainer);
+        }
+        if (techYear == '2015') {
+            document.querySelector(".y_2015").appendChild(techContainer);
+        }
+        if (techYear == '2016') {
+            document.querySelector(".y_2016").appendChild(techContainer);
+        }
+        if (techYear == '2017') {
+            document.querySelector(".y_2017").appendChild(techContainer);
+        }
+        if (techYear == '2018') {
+            document.querySelector(".y_2018").appendChild(techContainer);
+        }
+        if (techYear == '2019') {
+            document.querySelector(".y_2019").appendChild(techContainer);
+        }
+        if (techYear == '2020') {
+            document.querySelector(".y_2020").appendChild(techContainer);
+        }
+        if (techYear == '2021') {
+            document.querySelector(".y_2021").appendChild(techContainer);
+        }
+        if (techYear == 'N/A') {
+            document.querySelector(".y_NA").appendChild(techContainer);
+        }
+
+        document.querySelector(".click-phone").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("phone")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-tablet").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("tablet")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-computer").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("computer")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-keyboard").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("keyboard")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-mouse").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("mouse")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-watch").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("watch")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-game").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("game")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-music").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("music")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
 });
 }

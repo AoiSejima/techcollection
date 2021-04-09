@@ -78,10 +78,19 @@ h2 {
     border: 0.3rem solid #CDB805;
 }
 
+.container {
+    padding: 10rem;
+}
+
+.type-container {
+    margin-left: 3rem;
+    margin-top: 5rem;
+}
+
 h3 {
     color: white;
     font-size: 1.5rem;
-    line-height: 1.6rem;
+    line-height: 3rem;
 }
 
 h3:hover {
@@ -90,26 +99,39 @@ h3:hover {
 }
 
 h4 {
-    color: black;
+    color: white;
+    margin-top: 1rem;
+}
+
+.year-container {
+    display: flex;
+    position: fixed;
+    margin-left: 27rem;
+    bottom: 3rem;
+    width: 70%;
+    height: 80rem;
+    overflow: scroll;
+}
+
+.year {
     font-size: 1.5rem;
+    /* border: 2px solid black; */
+    margin: 0.1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 img {
-    width: 50%;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
 }
 
-.js-image-container {
-    width: 65%;
-    height: 50%;
-    margin-left: 31rem;
-    margin-top: -308rem;
-    border: 5px solid red;
-    border-radius: 5px;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-gap: unset;
-}
-
-span {
-    
+img:hover {
+    position: relative;
+    width: 700%;  
+    bottom: 10rem;
+    right: 20rem;
+    z-index: 2;
 }
