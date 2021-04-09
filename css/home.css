@@ -22,18 +22,22 @@ li {
 }
 
 h1 {
+    position: relative;
     color: #4E4BF0;
     font-size: 3rem;
     line-height: 3rem;
     text-align: right;
+    z-index: 2;
 }
 
 h2 {
+    position: relative;
     color: white;
     font-size: 2rem;
     text-align: left;
     line-height: 2rem;
     margin-right: 70rem;
+    z-index: 2;
 }
 
 h3 {
@@ -51,16 +55,26 @@ h3 {
     transform: rotate(-45deg);
 }
 
-#tblButtons {
+main {
     position: relative;
-    margin-top: -2rem;
-    margin-left: 35rem;
+    margin-top: -7rem;
+    margin-left: 39rem;
+    z-index: 2;
+}
+
+#home-button {
+    position: absolute;
+    width: 10%;
+    align-items: center;
+    margin: 26rem auto auto 13rem;
+}
+
+#tblButtons {
     width: 20%;
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem;
     transform: rotate(45deg);
-    z-index: 2;
 }
 
 #greenCircle {
@@ -100,13 +114,6 @@ h3 {
     background: #FEE615;
     border: 0.5rem solid #CDB805;
     white-space: pre-wrap;
-}
-
-#home-button {
-    position: absolute;
-    width: 8%;
-    align-items: center;
-    margin: -22rem auto auto 50rem;
 }
 
 #animation-container {
