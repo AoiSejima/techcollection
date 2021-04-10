@@ -25,26 +25,31 @@
         <img id="cloud-three-animation" src="assets/img/pixelated-illustration-cloud1.png" />
     </div>
     <main>
-        <img id="home-button" src="assets/img/pixelated-illustration-home1.png" />
-        <div id="tblButtons">
+        <div id="button-container">
             <div id="greenCircle">
-                <input id="chkTimeframe" type="checkbox" value="1"/>
-                <label for="chkTimeframe"><h3>TIME<br>FRAME</h3></label>
+                <div for="chkTimeframe">
+                    <h3><input id="chkTimeframe" type="checkbox" value="Timeframe"/> TIME<br>FRAME</h3>
+                </div>
             </div>
             <div id="redCircle">
-                <input id="chkBrand" type="checkbox" value="2"/>
-                <label for="chkBrand"><h3>BRAND</h3></label>
-            </div>
-            <div id="blueCircle">
-                <input id="chkType" type="checkbox" value="3"/>
-                <label for="chkType"><h3>TYPE</h3></label>
+                <div for="chkBrand">
+                    <h3><input id="chkBrand" type="checkbox" value="Brand"/> BRAND</h3>
+                </div>
             </div>
             <div id="yellowCircle">
-                <input id="chkSize" type="checkbox" value="4"/>
-                <label for="chkSize"><h3>SIZE</h3></label>
+                <div for="chkSize">
+                    <h3><input id="chkSize" type="checkbox" value="Size"/> SIZE</h3>
+                </div>
+            </div>
+            <div id="blueCircle">
+                <div for="chkType">
+                    <h3><input id="chkType" type="checkbox" value="Type"/> TYPE</h3>
+                </div>
             </div>
         </div>
-        <input type="button" value="Check" onclick="return Validate()" />
+        <button type="button" value="Check" onclick="return Validate()">
+            <img id="home-button" src="assets/img/pixelated-illustration-home1.png" />
+        </button>
     </main>
     
     <!-- <a href="index.html"><i id="fa fa-arrow-circle-o-left" style="font-size:5rem;color:white"></i></a> -->

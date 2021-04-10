@@ -40,41 +40,55 @@ h2 {
     z-index: 2;
 }
 
+main {
+    position: absolute;
+    margin-top: -9rem;
+    margin-left: 39rem;
+    z-index: 2;
+}
+
+#button-container {
+    width: 20%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    transform: rotate(45deg);
+}
+
 h3 {
-    position: relative;
+    position: flex;
     font-family: "Pixeled";
     color: white;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #898989;
     font-size: 2.5rem;    
     line-height: 4rem;
-    white-space: pre-wrap;
     text-align: center;
-    top: 2rem;
-    left: 0.3rem;
     transform: rotate(-45deg);
+    margin-top: 3rem;
+    left: -2rem;
 }
 
-main {
-    position: relative;
-    margin-top: -7rem;
-    margin-left: 39rem;
-    z-index: 2;
+input {
+    width: 2rem;
+    height: 2rem;
+}
+
+button {
+    border-radius: 50%;
+    position: absolute;
+    margin: -12rem auto auto 12.4rem;
+    width: 6rem;
+    height: 6rem;
+    background: rgb(175, 175, 175);
+    border: none;
 }
 
 #home-button {
-    position: absolute;
-    width: 10%;
+    width: 9rem;
+    height: 9rem;
+    margin: -1.5rem auto auto -1.5rem;
     align-items: center;
-    margin: 26rem auto auto 13rem;
-}
-
-#tblButtons {
-    width: 20%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem;
-    transform: rotate(45deg);
 }
 
 #greenCircle {
@@ -84,6 +98,10 @@ main {
     display: inline-block;
     background: #86D38F;
     border: 0.5rem solid #69B972;
+}
+
+#greenCircle:hover {
+    box-shadow: 0px 0px 30px #69B972;
 }
 
 #redCircle {
@@ -96,14 +114,8 @@ main {
     white-space: pre-wrap;
 }
 
-#blueCircle {
-    width: 18rem;
-    height: 18rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #518DD3;
-    border: 0.5rem solid #3D75B6;
-    white-space: pre-wrap;
+#redCircle:hover {
+    box-shadow: 0px 0px 30px #B63D30;
 }
 
 #yellowCircle {
@@ -114,6 +126,24 @@ main {
     background: #FEE615;
     border: 0.5rem solid #CDB805;
     white-space: pre-wrap;
+}
+
+#yellowCircle:hover {
+    box-shadow: 0px 0px 30px #CDB805;
+}
+
+#blueCircle {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #518DD3;
+    border: 0.5rem solid #3D75B6;
+    white-space: pre-wrap;
+}
+
+#blueCircle:hover {
+    box-shadow: 0px 0px 30px #3D75B6;
 }
 
 #animation-container {
@@ -165,8 +195,4 @@ main {
     left: 15rem;
     display: grid;
     grid-template-columns: 1, 1fr;
-}
-
-.tblButtons {
-    margin-left: 20rem;
 }

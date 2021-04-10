@@ -60,15 +60,6 @@ h2 {
     border: 0.3rem solid #B63D30;
 }
 
-#blueCircle {
-    width: 2.2rem;
-    height: 2.2rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #518DD3;
-    border: 0.3rem solid #3D75B6;
-}
-
 #yellowCircle {
     width: 2.2rem;
     height: 2.2rem;
@@ -78,10 +69,28 @@ h2 {
     border: 0.3rem solid #CDB805;
 }
 
+#blueCircle {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #518DD3;
+    border: 0.3rem solid #3D75B6;
+}
+
+.container {
+    padding: 10rem;
+}
+
+.type-container {
+    margin-left: 3rem;
+    margin-top: 5rem;
+}
+
 h3 {
     color: white;
     font-size: 1.5rem;
-    line-height: 1.6rem;
+    line-height: 0.1rem;
 }
 
 h3:hover {
@@ -90,37 +99,60 @@ h3:hover {
 }
 
 h4 {
-    color: black;
-    font-size: 1.5rem;
+    color: white;
+    margin-top: 1rem;
 }
 
-.js-brand-container {
-    width: 17%;
-    border: 5px solid black;
-    border-radius: 5px;
+.brand-container {
+    display: flex;
+    position: relative;
     margin-left: 3rem;
+    bottom: 1rem;
+    width: 20rem;
+    height: 45rem;
+    overflow-y: scroll;
+    flex-direction: column;
 }
 
-/* .js-brand-container.active {
-    display: block;
-} */
+.year-container {
+    display: flex;
+    position: fixed;
+    margin-left: 27rem;
+    bottom: 3rem;
+    width: 70%;
+    height: 80rem;
+    overflow: scroll;
+}
+
+.year {
+    font-size: 1.5rem;
+    margin: 0.1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column-reverse;
+}
 
 img {
-    width: 50%;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
 }
 
-.js-image-container {
-    width: 65%;
-    height: 50%;
-    margin-left: 31rem;
-    margin-top: -308rem;
-    border: 5px solid red;
-    border-radius: 5px;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-gap: unset;
+img:hover {
+    position: relative;
+    width: 700%;  
+    bottom: 10rem;
+    right: 20rem;
+    z-index: 2;
 }
 
-/* .js-image-container.active {
+#home-bar {
+
+}
+
+#home-bar img {
+    width: 30%;
     display: block;
-} */
+    margin: auto;
+    z-index: 2;
+}

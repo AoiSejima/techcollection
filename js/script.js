@@ -1,10 +1,9 @@
 function Validate() {
     var checked = 0;
 
-    //Reference the Table.
-    var tblButtons = document.getElementById("tblButtons");
+    var tblButtons = document.getElementById("button-container");
 
-    //Reference all the CheckBoxes in Table.
+    //Reference all the CheckBoxes in container.
     var chks = tblButtons.getElementsByTagName("INPUT");
 
     //Loop and count the number of checked CheckBoxes.
@@ -21,6 +20,16 @@ function Validate() {
         alert("Please select CheckBoxe(s).");
         return false;
     }
+
+    document.querySelector(".click-music").addEventListener("click", function () {
+
+        if (techContainer.classList.contains("music")){
+              techContainer.style.display = "flex";
+            } else {
+              techContainer.style.display = "none";
+            }
+
+    })
 
     // if click Timeframe and Brand checkmarks, then move to the next page
     // window.location.href = "timeframe-brand.html";

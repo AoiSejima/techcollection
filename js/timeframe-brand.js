@@ -37,7 +37,12 @@ function gotAllTechs(err) {
   
     // call functions to log and show the techs
     consoleLogTechs();
-    showTechs();
+
+    try {
+        showTechs();
+    } catch (e) {
+        console.error(e);
+    }
 };
 
 // just loop through the techs and console.log them
@@ -52,65 +57,408 @@ function consoleLogTechs() {
 function showTechs() {
     console.log("showTechs()");
     techs.forEach((tech) => {
-        // const h2 = document.createElement("h3");
-        // h3.innerText = tech.fields.year;
-        // document.body.appendChild(h3);  
-
-
         // let techTitle = document.createElement("h3");
         // techTitle.innerText = tech.fields.title;
         // document.body.appendChild(techTitle);
 
-        // creating a new div container for ALL
+        // creating a new div container for EACH tech item
+        // haven't added to the page yet by appending
         let techContainer = document.createElement("div");
         techContainer.classList.add("tech-container");
-        document.querySelector(".js-tech-container").appendChild(techContainer);
 
-        // creating a new div container for BRAND
-        let brandContainer = document.createElement("div");
-        brandContainer.classList.add("brand-container");
-        document.querySelector(".js-brand-container").appendChild(brandContainer);
-        
-        let techBrand = document.createElement("h3");
-        techBrand.classList.add("tech-brand");
-        techBrand.innerText = tech.fields.brand;
-        brandContainer.appendChild(techBrand);
-
-        // creating a new div container for IMAGE
-        let imageContainer = document.createElement("div");
-        imageContainer.classList.add("image-container");
-        document.querySelector(".js-image-container").appendChild(imageContainer);
-
+        // creating a new tech-img elemtnt
         let techImage = document.createElement("img");
         techImage.classList.add("tech-image");
         techImage.src = tech.fields.img[0].url;
-        imageContainer.appendChild(techImage);
+        // adding the image to the tech container
+        techContainer.appendChild(techImage);
 
+        let techYear = tech.fields.year;
 
-        // let techYear = document.createElement("h3");
-        // techYear.innerText = tech.fields.year;
-        // document.body.appendChild(techYear);
+        let techBrand = tech.fields.brand;
 
-        // let techBrand = document.createElement("h3");
-        // techBrand.innerText = tech.fields.brand;
-        // document.body.appendChild(techBrand);
+        // adding techBrand as a class to each tech container
+        // clicking amazon would only add amazon products to the container
+        techContainer.classList.add(techBrand);
 
-        // let techImage = document.createElement("img");
-        // techImage.src = tech.fields.img[0].url;
-        // document.body.appendChild(techImage);
+        if (techYear == '1964') {
+            document.querySelector(".y_1964").appendChild(techContainer);
+        }
+        if (techYear == '1983') {
+            document.querySelector(".y_1983").appendChild(techContainer);
+        }
+        if (techYear == '1984') {
+            document.querySelector(".y_1984").appendChild(techContainer);
+        }
+        if (techYear == '1985') {
+            document.querySelector(".y_1985").appendChild(techContainer);
+        }
+        if (techYear == '1991') {
+            document.querySelector(".y_1991").appendChild(techContainer);
+        }
+        if (techYear == '1994') {
+            document.querySelector(".y_1994").appendChild(techContainer);
+        }
+        if (techYear == '2004') {
+            document.querySelector(".y_2004").appendChild(techContainer);
+        }
+        if (techYear == '2006') {
+            document.querySelector(".y_2006").appendChild(techContainer);
+        }
+        if (techYear == '2007') {
+            document.querySelector(".y_2007").appendChild(techContainer);
+        }
+        if (techYear == '2010') {
+            document.querySelector(".y_2010").appendChild(techContainer);
+        }
+        if (techYear == '2012') {
+            document.querySelector(".y_2012").appendChild(techContainer);
+        }
+        if (techYear == '2013') {
+            document.querySelector(".y_2013").appendChild(techContainer);
+        }
+        if (techYear == '2014') {
+            document.querySelector(".y_2014").appendChild(techContainer);
+        }
+        if (techYear == '2015') {
+            document.querySelector(".y_2015").appendChild(techContainer);
+        }
+        if (techYear == '2016') {
+            document.querySelector(".y_2016").appendChild(techContainer);
+        }
+        if (techYear == '2017') {
+            document.querySelector(".y_2017").appendChild(techContainer);
+        }
+        if (techYear == '2018') {
+            document.querySelector(".y_2018").appendChild(techContainer);
+        }
+        if (techYear == '2019') {
+            document.querySelector(".y_2019").appendChild(techContainer);
+        }
+        if (techYear == '2020') {
+            document.querySelector(".y_2020").appendChild(techContainer);
+        }
+        if (techYear == '2021') {
+            document.querySelector(".y_2021").appendChild(techContainer);
+        }
+        if (techYear == 'N/A') {
+            document.querySelector(".y_NA").appendChild(techContainer);
+        }
 
+        document.querySelector(".click-3Dconnexion").addEventListener("click", function () {
 
-        // let techYear = document.createElement("h4");
-        // // techYear.classList.add("year")
-        // techYear.innerText = tech.fields.year;
-        // document.querySelector(".years").appendChild(techYear);
+            if (techContainer.classList.contains("3Dconnexion")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
 
-        // let techBrand = document.createElement("h3");
-        // techBrand.innerText = tech.fields.brand;
-        // document.querySelector(".brands").appendChild(techBrand);
+        })
+        document.querySelector(".click-Acer").addEventListener("click", function () {
 
-        // let techImage = document.createElement("img");
-        // techImage.src = tech.fields.img[0].url;
-        // document.querySelector(".container").append(techImage);
+            if (techContainer.classList.contains("Acer")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Amazon").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Amazon")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Apple").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Apple")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Asus").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Asus")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Bang_Olufsen").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Bang_Olufsen")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Beats").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Beats")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Blackberry").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Blackberry")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Boring_Phone").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Boring_Phone")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Bose").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Bose")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Cherry_MX").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Cherry_MX")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Dell").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Dell")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Eluktronic").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Eluktronic")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-FitBit").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("FitBit")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Google").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Google")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-HP").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("HP")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Huawei").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Huawei")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Jabra").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Jabra")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Jaybird").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Jaybird")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-JBL").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("JBL")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Lenovo").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Lenovo")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-LG").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("LG")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Logitech").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Logitech")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Microsoft").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Microsoft")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Motorola").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Motorola")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Nintendo").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Nintendo")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-None").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("None")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-OnePlus").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("OnePlus")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Oppo").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Oppo")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Palm").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Palm")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Razer").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Razer")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Samsung").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Samsung")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Senheiser").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Senheiser")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Sony").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Sony")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
+        document.querySelector(".click-Vivo").addEventListener("click", function () {
+
+            if (techContainer.classList.contains("Vivo")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+
+        })
 });
 }
