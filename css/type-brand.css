@@ -1,5 +1,5 @@
 body {
-    background: gray;
+    background: black;
     margin: 0 auto;
     font-family: "Retro Gaming";
 }
@@ -49,6 +49,7 @@ h2 {
     display: inline-block;
     background: #86D38F;
     border: 0.3rem solid #69B972;
+    opacity: 0.5;
 }
 
 #redCircle {
@@ -60,6 +61,16 @@ h2 {
     border: 0.3rem solid #B63D30;
 }
 
+#yellowCircle {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #FEE615;
+    border: 0.3rem solid #CDB805;
+    opacity: 0.5;
+}
+
 #blueCircle {
     width: 2.2rem;
     height: 2.2rem;
@@ -69,19 +80,19 @@ h2 {
     border: 0.3rem solid #3D75B6;
 }
 
-#yellowCircle {
-    width: 2.2rem;
-    height: 2.2rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #FEE615;
-    border: 0.3rem solid #CDB805;
+.container {
+    padding: 10rem;
+}
+
+.type-container {
+    margin-left: 3rem;
+    margin-top: 5rem;
 }
 
 h3 {
     color: white;
     font-size: 1.5rem;
-    line-height: 1.6rem;
+    line-height: 0.1rem;
 }
 
 h3:hover {
@@ -90,137 +101,115 @@ h3:hover {
 }
 
 h4 {
-    color: black;
-    font-size: 1.5rem;
+    color: white;
+    margin-top: 1rem;
+    display: fixed;
+    text-align: center;
 }
 
-
-
-
-span {
-    display: block;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    line-height: 2rem;
+.brand-container {
+    display: flex;
+    position: relative;
+    margin-left: 3rem;
+    width: 20rem;
+    height: 37rem;
+    overflow-y: scroll;
+    flex-direction: column;
 }
 
-.js-type-filter  {
+.type-container {
+    display: flex;
     position: fixed;
-    margin-top: 3rem;
-    margin-left: -26.7rem;
-    font-size: 2rem;
+    margin-left: 28rem;
+    bottom: 7rem;
+    width: 70%;
 }
 
-.js-tech-container {
-    width: 40%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 6rem;
-    margin: auto;
-    padding-top: 5rem;
-    padding-bottom: 6rem;
-    text-align: center;
-}
-
-.tech-container {
+.type {
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: 0.5rem;
     width: 100%;
-    border-radius: 10px;
-    margin: auto;
-}
-
-.tech-container:hover {
-    box-shadow: 0px 0px 80px rgb(255, 255, 255);
-    transition: all 0.2s ease-in-out;
+    height: 40rem;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
 }
 
 img {
-    width: 80%;
+    width: 100%;
     height: auto;
+    margin-top: 1rem;
+}
+
+img:hover {
+    position: relative;
+    width: 700%;  
+    bottom: 10rem;
+    right: 20rem;
+    z-index: 2;
+}
+
+#home-bar {
+    display: block;
+    background: linear-gradient(180deg, rgba(7,12,73,1) 0%, rgba(62,72,204,0.7) 14%, rgba(84,96,255,0.7) 28%, rgba(52,61,183,0.65) 58%, rgba(0,5,70,0.1) 100%);
+    width: 100%;
+    height: 5.3rem;
+    margin-top: 6rem;
+}
+
+#home-bar img {
+    width: 6%;
     display: block;
     margin: auto;
+    pointer-events: none;
 }
 
-.tech-brand {
-    display: none;
+h5 {
+    color: white;
+    font-size: 3rem;
+    z-index: 3;
 }
 
-.tech-brand.active {
-    display: block;
-}
-
-.tech-image {
-    display: none;
-}
-
-.tech-image.active {
-    display: block;
-}
-
-
-@media only screen and (max-width: 812px) {  
-    
+#upperbox {
+    position: absolute;
+    background: rgb(180,101,0);
+    background: linear-gradient(180deg, rgba(180,101,0,0.7) 0%, rgba(251,145,9,0) 100%);
+    width: 15%;
+    height: 4rem;
+    left: 2rem;
+    bottom: 47rem;
+    z-index: 2;
 }
 
 
-
-
-
-/* .js-brand-container {
-    width: 17%;
-    border: 5px solid black;
-    border-radius: 5px;
-    margin-left: 3rem;
-}
-
-.js-brand-container.active {
-    display: block;
-}
-
-.js-image-container {
-    width: 65%;
-    height: 50%;
-    margin-left: 31rem;
-    margin-top: -308rem;
-    border: 5px solid red;
-    border-radius: 5px;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-gap: unset;
-}
-
-.js-image-container.active {
-    display: block;
-} */
-
-/* 
-.js-tech-container {
-    width: 17%;
-    border: 5px solid black;
-    border-radius: 5px;
-    margin-left: 3rem;
-}
-
-.js-type-filter {
+#upperarrow {
+    transform: rotate(-90deg);
+    position: relative;
     text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    font-size: 2rem;
-    word-spacing: 3rem;
+    margin: auto;
+    margin-left: -1rem;
+    margin-top: -0.3rem;
 }
 
-img {
-    width: 10%;
-    display: none;
+#bottombox {
+    position: absolute;
+    background: rgb(180,101,0);
+    background: linear-gradient(180deg, rgba(180,101,0,0.7) 0%, rgba(251,145,9,0) 100%);
+    width: 15%;
+    height: 4rem;
+    left: 2rem;
+    bottom: 10rem;
+    transform: rotate(180deg);
+    z-index: 2;
 }
 
-img.active {
-    display: block;
+#bottomarrow {
+    transform: rotate(-90deg);
+    position: relative;
+    text-align: center;
+    margin: auto;
+    margin-left: -1rem;
+    margin-top: -0.5rem;
 }
-
-.js-brand {
-    display: none;
-}
-
-.js-brand.active {
-    display: block;
-} */

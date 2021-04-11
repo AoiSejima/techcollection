@@ -74,21 +74,14 @@ input {
     height: 2rem;
 }
 
-button {
-    border-radius: 50%;
+img {
     position: absolute;
-    margin: -12rem auto auto 12.4rem;
-    width: 6rem;
-    height: 6rem;
-    background: rgb(175, 175, 175);
-    border: none;
-}
-
-#home-button {
-    width: 9rem;
-    height: 9rem;
-    margin: -1.5rem auto auto -1.5rem;
+    display: flex;
+    width: 20%;
     align-items: center;
+    margin-top: 28rem;
+    margin-left: 11.6rem;
+    z-index: 2;
 }
 
 #greenCircle {
@@ -155,7 +148,7 @@ button {
     animation: go-left-right 7s linear 1s infinite;
     position: absolute;
     width: 20%;
-    top: -7rem;
+    top: -40rem;
 }
 
 @keyframes go-left-right { 
@@ -167,7 +160,7 @@ button {
     animation: go-right-left 10s linear 1s infinite;
     position: absolute;
     width: 20%;
-    top: -13rem;
+    top: -30rem;
 }
 
 @keyframes go-right-left { 
@@ -179,20 +172,10 @@ button {
     animation: go-right-left 15s linear 1s infinite;
     position: absolute;
     width: 30%;
-    top: -7rem;
+    top: -30rem;
 }
 
 @keyframes go-right-left { 
     from { left: -25rem; }
     to { left: calc(100% - -5rem); }
-}
-
-
-#fornow {
-    position: absolute;
-    font-size: 1.5rem;
-    top: 50rem;
-    left: 15rem;
-    display: grid;
-    grid-template-columns: 1, 1fr;
 }
