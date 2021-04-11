@@ -80,13 +80,15 @@ h2 {
     opacity: 0.5;
 }
 
-.container {
-    padding: 10rem;
-}
-
-.type-container {
+.brand-container {
+    display: flex;
+    position: relative;
     margin-left: 3rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
+    width: 20rem;
+    height: 37rem;
+    overflow-y: scroll;
+    flex-direction: column;
 }
 
 h3 {
@@ -98,22 +100,6 @@ h3 {
 h3:hover {
     color: #F0A71D;
     transition: all 0.2s ease-in-out;
-}
-
-h4 {
-    color: white;
-    margin-top: 1rem;
-}
-
-.brand-container {
-    display: flex;
-    position: relative;
-    margin-left: 3rem;
-    margin-top: 2rem;
-    width: 20rem;
-    height: 37rem;
-    overflow-y: scroll;
-    flex-direction: column;
 }
 
 .year-container {
@@ -134,18 +120,33 @@ h4 {
     flex-direction: column-reverse;
 }
 
+h4 {
+    color: white;
+    margin-top: 1rem;
+}
+
 img {
-    width: 100%;
-    height: auto;
+    width: 5rem;
+    height: 5rem;
+    object-fit: scale-down;
     margin-top: 1rem;
 }
 
 img:hover {
-    position: relative;
-    width: 700%;  
-    bottom: 10rem;
-    right: 20rem;
-    z-index: 2;
+    position: fixed;
+    display: block;
+    width: 30rem;
+    height: 30rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: white;
+    box-shadow: 1rem 1rem 5rem rgb(163, 163, 163);
+    z-index: 3;
 }
 
 #home-bar {

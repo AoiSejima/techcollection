@@ -80,33 +80,6 @@ h2 {
     border: 0.3rem solid #3D75B6;
 }
 
-.container {
-    padding: 10rem;
-}
-
-.type-container {
-    margin-left: 3rem;
-    margin-top: 5rem;
-}
-
-h3 {
-    color: white;
-    font-size: 1.5rem;
-    line-height: 0.1rem;
-}
-
-h3:hover {
-    color: #F0A71D;
-    transition: all 0.2s ease-in-out;
-}
-
-h4 {
-    color: white;
-    margin-top: 1rem;
-    display: fixed;
-    text-align: center;
-}
-
 .brand-container {
     display: flex;
     position: relative;
@@ -117,18 +90,28 @@ h4 {
     flex-direction: column;
 }
 
+h3 {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 0.1rem;
+}
+
+h3:hover {
+    color: #F0A71D;
+    transition: all 0.2s ease-in-out;
+}
+
 .type-container {
     display: flex;
     position: fixed;
-    margin-left: 28rem;
+    margin-left: 23rem;
     bottom: 7rem;
-    width: 70%;
+    width: 78%;
 }
 
 .type {
     font-size: 1.5rem;
     margin: 1rem;
-    padding: 0.5rem;
     width: 100%;
     height: 40rem;
     position: relative;
@@ -137,19 +120,26 @@ h4 {
     overflow-y: scroll;
 }
 
+h4 {
+    color: white;
+    margin-top: 1rem;
+    display: fixed;
+    text-align: center;
+}
+
 img {
     width: 100%;
     height: auto;
     margin-top: 1rem;
 }
 
-img:hover {
+/* img:hover {
     position: relative;
     width: 700%;  
     bottom: 10rem;
     right: 20rem;
     z-index: 2;
-}
+} */
 
 #home-bar {
     display: block;
