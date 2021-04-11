@@ -1,40 +1,42 @@
-function Validate() {
-    var checked = 0;
+// define all of our variables
 
-    var tblButtons = document.getElementById("button-container");
+// Timeframe Button
+let timeframeButton = document.querySelector("input[value=Timeframe]");
+// Brand Button
+let brandButton = document.querySelector("input[value=Brand]");
+// Size Button
+let sizeButton = document.querySelector("input[value=Size]");
+// Type Button
+let typeButton = document.querySelector("input[value=Type]");
 
-    //Reference all the CheckBoxes in container.
-    var chks = tblButtons.getElementsByTagName("INPUT");
+// define our form
+let formButton = document.querySelector("#button-container");
 
-    //Loop and count the number of checked CheckBoxes.
-    for (var i = 0; i < chks.length; i++) {
-        if (chks[i].checked) {
-            checked++;
-        }
+// create an event listener to them form to listen for changes
+formButton.addEventListener("change", function() {
+
+    if (timeframeButton.checked && brandButton.checked) {
+        window.location.href = "./timeframe-brand.html";
     }
 
-    if (checked > 0) {
-        alert(checked + " CheckBoxe(s) are checked.");
-        return true;
-    } else {
-        alert("Please select CheckBoxe(s).");
-        return false;
+    if (timeframeButton.checked && sizeButton.checked) {
+        window.location.href = "./timeframe-size.html";
     }
 
-    document.querySelector(".click-music").addEventListener("click", function () {
+    if (timeframeButton.checked && typeButton.checked) {
+        window.location.href = "./timeframe-type.html";
+    }
 
-        if (techContainer.classList.contains("music")){
-              techContainer.style.display = "flex";
-            } else {
-              techContainer.style.display = "none";
-            }
+    if (brandButton.checked && sizeButton.checked) {
+        window.location.href = "./type-brand.html";
+    }
 
-    })
+    if (brandButton.checked && typeButton.checked) {
+        window.location.href = "./size-brand.html";
+    }
 
-    // if click Timeframe and Brand checkmarks, then move to the next page
-    // window.location.href = "timeframe-brand.html";
+    if (sizeButton.checked && typeButton.checked) {
+        window.location.href = "./type-size.html";
+    }
 
-    // if click Timeframe and Type checkmarks, then move to the next page
-    // window.location.href = "timeframe-type.html";
-};
-
+});
