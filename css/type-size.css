@@ -1,89 +1,206 @@
 body {
-    background: gray;
-    margin: 2rem;
+    background: black;
+    margin: 0 auto;
     font-family: "Retro Gaming";
+}
+
+nav {
+    margin: -1rem 1rem auto -2rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li {
+    display: inline-block;
 }
 
 h1 {
-    position: relative;
-    font-family: "Retro Gaming";
     color: #4E4BF0;
     font-size: 3rem;
     text-align: center;
-    top: -0.5rem;
+    margin-left: 30rem;
+    margin-right: 30rem;
 }
 
 h2 {
-    position: absolute;
-    font-family: "Retro Gaming";
     color: white;
     font-size: 2rem;
-    text-align: left;
     line-height: 3rem;
-    top: 1rem;
-}
-
-h3 {
-    color: white;
-    font-size: 1.5rem;
-    line-height: 1.6rem;
-}
-
-h3:hover {
-    color: #F0A71D;
-}
-
-h4 {
-    color: black;
-    font-size: 1.5rem;
-}
-
-img {
-    width: 10%;
+    text-align: left;
 }
 
 #circles {
-    position: absolute;
-    width: 5%;
+    height: 1%;
     transform: rotate(45deg);
-    top: 3rem;
-    right: 2rem;
-    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
 }
 
 #greenCircle {
-    width: 2rem;
-    height: 2rem;
+    width: 2.2rem;
+    height: 2.2rem;
     border-radius: 50%;
     display: inline-block;
     background: #86D38F;
     border: 0.3rem solid #69B972;
+    opacity: 0.5;
 }
 
 #redCircle {
-    width: 2rem;
-    height: 2rem;
+    width: 2.2rem;
+    height: 2.2rem;
     border-radius: 50%;
     display: inline-block;
     background: #E35748;
     border: 0.3rem solid #B63D30;
 }
 
+#yellowCircle {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #FEE615;
+    border: 0.3rem solid #CDB805;
+    opacity: 0.5;
+}
+
 #blueCircle {
-    width: 2rem;
-    height: 2rem;
+    width: 2.2rem;
+    height: 2.2rem;
     border-radius: 50%;
     display: inline-block;
     background: #518DD3;
     border: 0.3rem solid #3D75B6;
 }
 
-#yellowCircle {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #FEE615;
-    border: 0.3rem solid #CDB805;
+.type-container {
+    margin-left: 3rem;
+    margin-top: 5rem;
 }
 
+h3 {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    cursor: pointer;
+}
+
+h3:hover {
+    color: #F0A71D;
+    transition: all 0.2s ease-in-out;
+}
+
+.size-container {
+    width: 75rem;
+    height: 48rem;
+    margin-left: 30rem;
+    margin-top: -31rem;
+    display: flex;
+    position: fixed;
+    overflow: scroll;
+}
+
+.size {
+    margin: 0.1rem;
+    padding: 0.5rem;
+    display: flex;
+}
+
+img {
+    width: 20rem;
+    height: 20rem;
+    object-fit: scale-down;
+    margin: 1rem;
+}
+
+h4 {
+    display: none;
+}
+
+h5 {
+    color: white;
+    font-size: 2rem;
+
+}
+
+#small {
+    margin-left: 25rem;
+    margin-top: -8rem;
+}
+
+#large {
+    margin-left: 102rem;
+    margin-top: -6rem;
+}
+
+h6 {
+    color: white;
+    font-size: 3rem;
+    z-index: 3;
+}
+
+#leftbox {
+    position: absolute;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 38%, rgba(0,0,0,0.39) 71%, rgba(0,0,0,0) 100%);
+    width: 20%;
+    height: 8rem;
+    left: 19em;
+    bottom: 25rem;
+    transform: rotate(-90deg);
+    z-index: 2;
+}
+
+#rightbox {
+    position: absolute;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 38%, rgba(0,0,0,0.39) 71%, rgba(0,0,0,0) 100%);
+    width: 20%;
+    height: 8rem;
+    right: -5rem;
+    bottom: 25rem;
+    transform: rotate(90deg);
+    z-index: 2;
+}
+
+#leftarrow {
+    transform: rotate(-90deg);
+    position: relative;
+    text-align: center;
+    margin: auto;
+    margin-left: -1rem;
+    margin-top: -0.5rem;
+}
+
+#rightarrow {
+    transform: rotate(-90deg);
+    position: relative;
+    text-align: center;
+    margin: auto;
+    margin-left: -1rem;
+    margin-top: -0.5rem;
+}
+
+#home-bar {
+    position: absolute;
+    display: block;
+    background: linear-gradient(180deg, rgba(7,12,73,1) 0%, rgba(62,72,204,0.7) 14%, rgba(84,96,255,0.7) 28%, rgba(52,61,183,0.65) 58%, rgba(0,5,70,0.1) 100%);
+    width: 100%;
+    height: 5.3rem;
+    margin-top: 9.6rem;
+}
+
+#home-bar img {
+    width: 5%;
+    position: absolute;
+    display: block;
+    margin-top: -7.1rem;
+    margin-left: 50%;
+}

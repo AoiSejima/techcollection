@@ -1,6 +1,6 @@
 body {
     /* background: #D0CFCA; */
-    background: #acd3ec;
+    background: #ade0ff;
     margin: 0 auto;
 }
 
@@ -55,8 +55,8 @@ main {
     transform: rotate(45deg);
 }
 
-h3 {
-    position: flex;
+h3, label {
+    display: flex;
     font-family: "Pixeled";
     color: white;
     -webkit-text-stroke-width: 2px;
@@ -64,9 +64,6 @@ h3 {
     font-size: 2.5rem;    
     line-height: 4rem;
     text-align: center;
-    transform: rotate(-45deg);
-    margin-top: 3rem;
-    left: -2rem;
 }
 
 input {
@@ -84,59 +81,111 @@ img {
     z-index: 2;
 }
 
-#greenCircle {
+.button-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+  
+.button-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+  
+input {
+    padding: 0;
+    width: 18rem;
+    height: 18rem;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+  
+label {
+    position: relative;
     width: 18rem;
     height: 18rem;
     border-radius: 50%;
+    cursor: pointer;
+    width: 18rem;
+    height: 18rem;
+}
+  
+label:before {
+    content: "";
+    -webkit-appearance: none;
+    background-color: transparent;
     display: inline-block;
-    background: #86D38F;
-    border: 0.5rem solid #69B972;
-}
-
-#greenCircle:hover {
-    box-shadow: 0px 0px 30px #69B972;
-}
-
-#redCircle {
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
     width: 18rem;
     height: 18rem;
     border-radius: 50%;
-    display: inline-block;
-    background: #E35748;
-    border: 0.5rem solid #B63D30;
+}
+
+/* this is the style when the button is clicked */
+#chkTimeframe:checked + label:before {
+    background: white;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #69b972, 0 0 40px #69b972, 0 0 50px #69b972, 0 0 60px #69b972, 0 0 70px #69b972;
+}
+
+#chkBrand:checked + label:before {
+    background: white;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #b63d30, 0 0 50px #b63d30, 0 0 60px #b63d30, 0 0 70px #b63d30;
+}
+
+#chkSizeZ:checked + label:before {
+    background: white;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #cdb805, 0 0 50px #cdb805, 0 0 60px #cdb805, 0 0 70px #cdb805;
+}
+
+#chkType:checked + label:before {
+    background: white;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #3d75b6, 0 0 50px #3d75b6, 0 0 60px #3d75b6, 0 0 70px #3d75b6;
+}
+
+.greenCircle {
+    background: #63d19a;
+    border: 0.5rem solid rgb(44, 190, 134);
     white-space: pre-wrap;
 }
 
-#redCircle:hover {
-    box-shadow: 0px 0px 30px #B63D30;
-}
-
-#yellowCircle {
-    width: 18rem;
-    height: 18rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #FEE615;
-    border: 0.5rem solid #CDB805;
+.blueCircle {
+    background: #4b8fdd;
+    border: 0.5rem solid #3d67b6;
     white-space: pre-wrap;
 }
 
-#yellowCircle:hover {
-    box-shadow: 0px 0px 30px #CDB805;
+.redCircle {
+    background: #f14d4d;
+    border: 0.5rem solid #ce3232;
+    white-space: pre-wrap;
 }
-
-#blueCircle {
-    width: 18rem;
-    height: 18rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #518DD3;
-    border: 0.5rem solid #3D75B6;
+  
+.yellowCircle {
+    background: #ffec46;
+    border: 0.5rem solid rgb(230, 209, 21);
     white-space: pre-wrap;
 }
 
-#blueCircle:hover {
-    box-shadow: 0px 0px 30px #3D75B6;
+.greenCircle:hover {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #63d19a, 0 0 50px #63d19a, 0 0 60px #63d19a, 0 0 70px #63d19a;
+}
+
+.redCircle:hover {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #f14d4d, 0 0 50px #f14d4d, 0 0 60px #f14d4d, 0 0 70px #f14d4d;
+}
+
+.yellowCircle:hover {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffec46, 0 0 50px #ffec46, 0 0 60px #ffec46, 0 0 70px #ffec46;
+}
+
+.blueCircle:hover {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #4b8fdd, 0 0 50px #4b8fdd, 0 0 60px #4b8fdd, 0 0 70px #4b8fdd;
 }
 
 #animation-container {

@@ -15,8 +15,12 @@
 <body>
     <nav>
         <ul>
-            <li><h2>CHOOSE<br>TWO<br>CIRCLES</h2></li>
-            <li><h1>TECH<br>COLLECTION</h1></li>
+            <li>
+                <h2>CHOOSE<br>TWO<br>CIRCLES</h2>
+            </li>
+            <li>
+                <h1>TECH<br>COLLECTION</h1>
+            </li>
         </ul>
     </nav>
     <div id="animation-container">
@@ -28,29 +32,32 @@
         <img src="assets/img/pixelated-illustration-home1.png" />
         <form id="button-container">
             <div id="greenCircle">
-                <div for="chkTimeframe">
-                    <h3><input id="chkTimeframe" type="checkbox" value="Timeframe"/> TIME<br>FRAME</h3>
-                </div>
+                <input id="chkTimeframe" type="checkbox" value="Timeframe" />
+                <label class="greenCircle" for="chkTimeframe">
+                    <h3 class="button-title">TIME<br>FRAME</h3>
+                </label>
             </div>
             <div id="redCircle">
-                <div for="chkBrand">
-                    <h3><input id="chkBrand" type="checkbox" value="Brand"/> BRAND</h3>
-                </div>
+                <input id="chkBrand" type="checkbox" value="Brand" /> 
+                <label class="redCircle" for="chkBrand">
+                    <h3 class="button-title">BRAND</h3>
+                </label>
             </div>
             <div id="yellowCircle">
-                <div for="chkSize">
-                    <h3><input id="chkSize" type="checkbox" value="Size"/> SIZE</h3>
-                </div>
+                <input id="chkSize" type="checkbox" value="Size" /> 
+                <label class="yellowCircle" for="chkSize">
+                    <h3 class="button-title">SIZE</h3>
+                </label>
             </div>
             <div id="blueCircle">
-                <div for="chkType">
-                    <h3><input id="chkType" type="checkbox" value="Type"/> TYPE</h3>
-                </div>
+                <input id="chkType" type="checkbox" value="Type" /> 
+                <label class="blueCircle" for="chkType">
+                    <h3 class="button-title">TYPE</h3>
+                </label>
             </div>
         </form>
     </main>
-    
     <!-- <a href="index.html"><i id="fa fa-arrow-circle-o-left" style="font-size:5rem;color:white"></i></a> -->
-    <a id="back" href="index.html">BACK TO LANDING PAGE</a>
+    <a href="index.html">BACK TO LANDING PAGE</a>
 </body>
 </html>

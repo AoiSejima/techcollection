@@ -1,5 +1,5 @@
 body {
-    background: gray;
+    background: black;
     margin: 0 auto;
     font-family: "Retro Gaming";
 }
@@ -58,6 +58,17 @@ h2 {
     display: inline-block;
     background: #E35748;
     border: 0.3rem solid #B63D30;
+    opacity: 0.5;
+}
+
+#yellowCircle {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #FEE615;
+    border: 0.3rem solid #CDB805;
+    opacity: 0.5;
 }
 
 #blueCircle {
@@ -69,17 +80,15 @@ h2 {
     border: 0.3rem solid #3D75B6;
 }
 
-#yellowCircle {
-    width: 2.2rem;
-    height: 2.2rem;
-    border-radius: 50%;
-    display: inline-block;
-    background: #FEE615;
-    border: 0.3rem solid #CDB805;
-}
-
-.container {
-    padding: 10rem;
+.brand-container {
+    display: flex;
+    position: relative;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    width: 20rem;
+    height: 37rem;
+    overflow-y: scroll;
+    flex-direction: column;
 }
 
 .type-container {
@@ -91,6 +100,7 @@ h3 {
     color: white;
     font-size: 1.5rem;
     line-height: 3rem;
+    cursor: pointer;
 }
 
 h3:hover {
@@ -98,19 +108,15 @@ h3:hover {
     transition: all 0.2s ease-in-out;
 }
 
-h4 {
-    color: white;
-    margin-top: 1rem;
-}
-
 .year-container {
     display: flex;
     position: fixed;
-    margin-left: 27rem;
-    bottom: 3rem;
+    right: 7rem;
+    bottom: 6rem;
     width: 70%;
     height: 80rem;
     overflow: scroll;
+    cursor: ew-resize;
 }
 
 .year {
@@ -121,16 +127,99 @@ h4 {
     flex-direction: column-reverse;
 }
 
+h4 {
+    color: white;
+    margin-top: 2rem;
+}
+
 img {
-    width: 100%;
-    height: auto;
-    margin-top: 1rem;
+    width: 5rem;
+    height: 5rem;
+    object-fit: scale-down;
 }
 
 img:hover {
-    position: relative;
-    width: 700%;  
-    bottom: 10rem;
-    right: 20rem;
+    position: fixed;
+    display: block;
+    width: 30rem;
+    height: 30rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: white;
+    box-shadow: 1rem 1rem 5rem rgb(163, 163, 163);
+    z-index: 3;
+}
+
+h5 {
+    color: white;
+    font-size: 3rem;
+    z-index: 3;
+}
+
+#timelinebar {
+    border-top: 0.4rem solid white;
+    width: 84rem;
+    margin-left: 25rem;
+    margin-top: -2rem;
+}
+
+#leftbox {
+    position: absolute;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 38%, rgba(0,0,0,0.39) 71%, rgba(0,0,0,0) 100%);
+    width: 8rem;
+    height: 30rem;
+    left: 21rem;
+    bottom: 7rem;
     z-index: 2;
+}
+
+#rightbox {
+    position: absolute;
+    background: rgb(0,0,0);
+    background: linear-gradient(260deg, rgba(0,0,0,1) 38%, rgba(0,0,0,0.39) 71%, rgba(0,0,0,0) 100%);
+    width: 8rem;
+    height: 30rem;
+    right: 2rem;
+    bottom: 7rem;
+    z-index: 2;
+}
+
+#leftarrow {
+    position: relative;
+    margin: auto;
+    margin-left: -1rem;
+    margin-top: 13rem;
+    text-align: center;
+}
+
+#rightarrow {
+    position: relative;
+    margin: auto;
+    margin-left: -1rem;
+    margin-top: 13rem;
+    text-align: center;
+}
+
+#home-button {
+    position: absolute;
+    width: 6%;
+    display: block;
+    margin-top: 5.5rem;
+    margin-left: 49%;
+    margin-right: 50%;
+    pointer-events: none;
+}
+
+#home-bar {
+    display: block;
+    background: linear-gradient(180deg, rgba(7,12,73,1) 0%, rgba(62,72,204,0.7) 14%, rgba(84,96,255,0.7) 28%, rgba(52,61,183,0.65) 58%, rgba(0,5,70,0.1) 100%);
+    width: 100%;
+    height: 5.3rem;
+    margin-top: 5rem;
 }
