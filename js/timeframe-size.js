@@ -37,7 +37,12 @@ function gotAllTechs(err) {
   
     // call functions to log and show the techs
     consoleLogTechs();
-    showTechs();
+
+    try {
+        showTechs();
+    } catch (e) {
+        console.error(e);
+    }
 };
 
 // just loop through the techs and console.log them
@@ -52,39 +57,198 @@ function consoleLogTechs() {
 function showTechs() {
     console.log("showTechs()");
     techs.forEach((tech) => {
-        // const h2 = document.createElement("h3");
-        // h3.innerText = tech.fields.year;
-        // document.body.appendChild(h3);  
 
+        // creating a new div container for EACH tech item
+        // haven't added to the page yet by appending
+        let techContainer = document.createElement("div");
+        techContainer.classList.add("tech-container");
 
-        // let techTitle = document.createElement("h3");
-        // techTitle.innerText = tech.fields.title;
-        // document.body.appendChild(techTitle);
-
-        let techYear = document.createElement("h3");
-        techYear.innerText = tech.fields.year;
-        document.body.appendChild(techYear);
-
-        let techSize = document.createElement("h3");
-        techSize.innerText = tech.fields.size;
-        document.body.appendChild(techSize);
-
+        // creating a new tech-img elemtnt
         let techImage = document.createElement("img");
+        techImage.classList.add("tech-image");
         techImage.src = tech.fields.img[0].url;
-        document.body.appendChild(techImage);
+        // adding the image to the tech container
+        techContainer.appendChild(techImage);
 
+        let techSize = tech.fields.size;
 
-        // let techYear = document.createElement("h4");
-        // // techYear.classList.add("year")
-        // techYear.innerText = tech.fields.year;
-        // document.querySelector(".years").appendChild(techYear);
+        let techYear = tech.fields.year;     
 
-        // let techBrand = document.createElement("h3");
-        // techBrand.innerText = tech.fields.brand;
-        // document.querySelector(".brands").appendChild(techBrand);
+        techContainer.classList.add(techYear);
 
-        // let techImage = document.createElement("img");
-        // techImage.src = tech.fields.img[0].url;
-        // document.querySelector(".container").append(techImage);
+        if (techSize == '0') {
+            document.querySelector(".s_0").appendChild(techContainer);
+        }
+        if (techSize == '1') {
+            document.querySelector(".s_1").appendChild(techContainer);
+        }
+        if (techSize == '2') {
+            document.querySelector(".s_2").appendChild(techContainer);
+        }
+        if (techSize == '3') {
+            document.querySelector(".s_3").appendChild(techContainer);
+        }
+        if (techSize == '4') {
+            document.querySelector(".s_4").appendChild(techContainer);
+        }
+        if (techSize == '5') {
+            document.querySelector(".s_5").appendChild(techContainer);
+        }
+        if (techSize == '6') {
+            document.querySelector(".s_6").appendChild(techContainer);
+        }
+        if (techSize == '7') {
+            document.querySelector(".s_7").appendChild(techContainer);
+        }
+        if (techSize == '8') {
+            document.querySelector(".s_8").appendChild(techContainer);
+        }
+        if (techSize == '9') {
+            document.querySelector(".s_9").appendChild(techContainer);
+        }
+        if (techSize == '10') {
+            document.querySelector(".s_10").appendChild(techContainer);
+        }
+
+        document.querySelector(".y_1964").addEventListener("click", function () {
+            if (techContainer.classList.contains("1964")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_1983").addEventListener("click", function () {
+            if (techContainer.classList.contains("1983")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_1984").addEventListener("click", function () {
+            if (techContainer.classList.contains("1984")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_1985").addEventListener("click", function () {
+            if (techContainer.classList.contains("1985")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_1991").addEventListener("click", function () {
+            if (techContainer.classList.contains("1991")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_1994").addEventListener("click", function () {
+            if (techContainer.classList.contains("1994")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_2004").addEventListener("click", function () {
+            if (techContainer.classList.contains("2004")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_2006").addEventListener("click", function () {
+            if (techContainer.classList.contains("2006")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_2007").addEventListener("click", function () {
+            if (techContainer.classList.contains("2007")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_2010").addEventListener("click", function () {
+            if (techContainer.classList.contains("2010")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_2012").addEventListener("click", function () {
+            if (techContainer.classList.contains("2012")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_2013").addEventListener("click", function () {
+            if (techContainer.classList.contains("2013")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_2014").addEventListener("click", function () {
+            if (techContainer.classList.contains("2014")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_2015").addEventListener("click", function () {
+            if (techContainer.classList.contains("2015")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_2016").addEventListener("click", function () {
+            if (techContainer.classList.contains("2016")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_2017").addEventListener("click", function () {
+            if (techContainer.classList.contains("2017")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_2018").addEventListener("click", function () {
+            if (techContainer.classList.contains("2018")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_2019").addEventListener("click", function () {
+            if (techContainer.classList.contains("2019")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_2020").addEventListener("click", function () {
+            if (techContainer.classList.contains("2020")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
+        document.querySelector(".y_2021").addEventListener("click", function () {
+            if (techContainer.classList.contains("2021")){
+                  techContainer.style.display = "flex";
+                } else {
+                  techContainer.style.display = "none";
+                }
+        })
 });
 }

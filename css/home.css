@@ -2,10 +2,10 @@ body {
     /* background: #D0CFCA; */
     background: #ade0ff;
     margin: 0 auto;
+    font-family: "Retro Gaming";
 }
 
 nav {
-    font-family: "Retro Gaming";
     margin: -1rem 1rem auto -1.5rem;
     z-index: 2;
 }
@@ -40,6 +40,19 @@ h2 {
     z-index: 2;
 }
 
+a {
+    text-decoration: none;
+}
+
+h4 {
+    position: relative;
+    color: #4E4BF0;
+    font-size: 5rem;
+    text-align: left;
+    margin-left: 3rem;
+    margin-top: 45rem;
+}
+
 main {
     position: absolute;
     margin-top: -9rem;
@@ -57,11 +70,10 @@ main {
 
 h3, label {
     display: flex;
-    font-family: "Pixeled";
     color: white;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #898989;
-    font-size: 2.5rem;    
+    font-size: 4.2rem;    
     line-height: 4rem;
     text-align: center;
 }
@@ -129,46 +141,42 @@ label:before {
 
 /* this is the style when the button is clicked */
 #chkTimeframe:checked + label:before {
-    background: white;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #69b972, 0 0 40px #69b972, 0 0 50px #69b972, 0 0 60px #69b972, 0 0 70px #69b972;
+    background: #0C934F;
 }
 
 #chkBrand:checked + label:before {
-    background: white;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #b63d30, 0 0 50px #b63d30, 0 0 60px #b63d30, 0 0 70px #b63d30;
+    background: #A42626;
 }
 
-#chkSizeZ:checked + label:before {
-    background: white;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #cdb805, 0 0 50px #cdb805, 0 0 60px #cdb805, 0 0 70px #cdb805;
+#chkSize:checked + label:before {
+    background: #C6B51C;
 }
 
 #chkType:checked + label:before {
-    background: white;
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #3d75b6, 0 0 50px #3d75b6, 0 0 60px #3d75b6, 0 0 70px #3d75b6;
+    background: #074E9F;
 }
 
 .greenCircle {
-    background: #63d19a;
-    border: 0.5rem solid rgb(44, 190, 134);
-    white-space: pre-wrap;
-}
-
-.blueCircle {
-    background: #4b8fdd;
-    border: 0.5rem solid #3d67b6;
+    background: #41E091;
+    border: 0.5rem solid #17B968;
     white-space: pre-wrap;
 }
 
 .redCircle {
-    background: #f14d4d;
-    border: 0.5rem solid #ce3232;
+    background: #EB4343;
+    border: 0.5rem solid #CE3232;
     white-space: pre-wrap;
 }
-  
+
 .yellowCircle {
-    background: #ffec46;
-    border: 0.5rem solid rgb(230, 209, 21);
+    background: #FCE72E;
+    border: 0.5rem solid #E6D115;
+    white-space: pre-wrap;
+}
+
+.blueCircle {
+    background: #4499FB;
+    border: 0.5rem solid #2774CC;
     white-space: pre-wrap;
 }
 
@@ -190,41 +198,39 @@ label:before {
 
 #animation-container {
     position: relative;
+    top: -2rem;
     z-index: 1;
 }
 
-#cloud-one-animation {
-    animation: go-left-right 7s linear 1s infinite;
-    position: absolute;
+#cloud-top-animation {
+    animation: left-right 7s linear infinite;
     width: 20%;
     top: -40rem;
 }
 
-@keyframes go-left-right { 
-    from { left: -25rem; }
-    to { left: calc(100% - -5rem); }
+@keyframes left-right { 
+    0%   { transform: translateX(-25rem); }
+    100%  { transform: translateX(100rem); }
 }
 
-#cloud-two-animation {
-    animation: go-right-left 10s linear 1s infinite;
-    position: absolute;
+#cloud-middle-animation {
+    animation: right-left-one 10s linear infinite;
     width: 20%;
     top: -30rem;
 }
 
-@keyframes go-right-left { 
-    from { left: -25rem; }
-    to { left: calc(100% - -5rem); }
+@keyframes right-left-one { 
+    0%   { transform: translateX(-25rem); }
+    100%  { transform: translateX(100rem); }
 }
 
-#cloud-three-animation {
-    animation: go-right-left 15s linear 1s infinite;
-    position: absolute;
+#cloud-bottom-animation {
+    animation: right-left-two 15s linear infinite;
     width: 30%;
     top: -30rem;
 }
 
-@keyframes go-right-left { 
-    from { left: -25rem; }
-    to { left: calc(100% - -5rem); }
+@keyframes right-left-two { 
+    0%   { transform: translateX(-25rem); }
+    100%  { transform: translateX(100rem); }
 }

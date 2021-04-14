@@ -62,7 +62,6 @@ h2 {
     display: inline-block;
     background: #EB4343;
     border: 0.3rem solid #CE3232;
-    opacity: 0.3;
 }
 
 #yellowCircle {
@@ -72,6 +71,7 @@ h2 {
     display: inline-block;
     background: #FCE72E;
     border: 0.3rem solid #E6D115;
+    opacity: 0.3;
 }
 
 #blueCircle {
@@ -84,13 +84,12 @@ h2 {
     opacity: 0.3;
 }
 
-.year-container {
+.brand-container {
     display: flex;
     position: relative;
-    text-align: center;
-    width: 6rem;
+    width: 20rem;
     height: 35rem;
-    margin-left: 5.5rem;
+    margin-left: 4rem;
     margin-top: 5rem;
     overflow-y: scroll;
     flex-direction: column;
@@ -108,11 +107,48 @@ h3:hover {
     transition: all 0.2s ease-in-out;
 }
 
+.year-container {
+    display: flex;
+    position: fixed;
+    right: 7rem;
+    bottom: 5rem;
+    width: 70%;
+    height: 50rem;
+    overflow-x: scroll;
+    cursor: ew-resize;
+}
+
+.year {
+    font-size: 1.5rem;
+    margin: 0.1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+h4 {
+    color: white;
+    margin-top: 2rem;
+}
+
+#timelinebar {
+    border-top: 0.4rem solid white;
+    width: 89rem;
+    margin-top: -1rem;
+    margin-left: 22rem;
+}
+
+h5 {
+    color: white;
+    font-size: 3rem;
+    z-index: 3;
+}
+
 #upperbox {
     position: absolute;
     background: rgb(78,75,240);
     background: linear-gradient(180deg, rgba(78,75,240,1) 16%, rgba(0,0,0,0) 100%);
-    width: 10%;
+    width: 15%;
     height: 4rem;
     left: 3rem;
     top: 16rem;
@@ -123,7 +159,7 @@ h3:hover {
     position: absolute;
     background: rgb(78,75,240);
     background: linear-gradient(0deg, rgba(78,75,240,1) 16%, rgba(0,0,0,0) 100%);
-    width: 10%;
+    width: 15%;
     height: 4rem;
     left: 3rem;
     bottom: 8rem;
@@ -136,7 +172,7 @@ h3:hover {
     text-align: center;
     margin: auto;
     margin-left: -1rem;
-    margin-top: -0.5;
+    margin-top: -0.8rem;
 }
 
 #bottomarrow {
@@ -145,7 +181,7 @@ h3:hover {
     text-align: center;
     margin: auto;
     margin-left: 0.5rem;
-    margin-top: 1.5rem;
+    margin-top: 0.8rem;
 }
 
 #leftbox {
@@ -159,6 +195,14 @@ h3:hover {
     z-index: 2;
 }
 
+#leftarrow {
+    position: relative;
+    margin: auto;
+    margin-left: -2rem;
+    margin-top: 13rem;
+    text-align: center;
+}
+
 #rightbox {
     position: absolute;
     background: rgba(0,0,0);
@@ -170,14 +214,6 @@ h3:hover {
     z-index: 2;
 }
 
-#leftarrow {
-    position: relative;
-    margin: auto;
-    margin-left: -2rem;
-    margin-top: 13rem;
-    text-align: center;
-}
-
 #rightarrow {
     position: relative;
     margin: auto;
@@ -186,104 +222,47 @@ h3:hover {
     text-align: center;
 }
 
-.size-container {
-    width: 75rem;
-    height: 48rem;
-    margin-left: 30rem;
-    margin-top: -31rem;
-    display: flex;
-    position: fixed;
-    overflow: scroll;
-}
-
-.size {
-    margin: 0.1rem;
-    padding: 0.5rem;
-    display: flex;
-}
-
 img {
-    width: 20rem;
-    height: 20rem;
+    width: 5rem;
+    height: 5rem;
     object-fit: scale-down;
-    margin: 1rem;
 }
 
-h4 {
-    display: none;
-}
-
-h5 {
-    color: white;
-    font-size: 2rem;
-
-}
-
-#small {
-    margin-left: 25rem;
-    margin-top: -8rem;
-}
-
-#large {
-    margin-left: 102rem;
-    margin-top: -6rem;
-}
-
-h6 {
-    color: white;
-    font-size: 3rem;
+img:hover {
+    position: fixed;
+    display: block;
+    width: 30rem;
+    height: 30rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: white;
+    box-shadow: 1rem 1rem 5rem rgb(163, 163, 163);
     z-index: 3;
-}
-
-#leftbox {
-    position: absolute;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 38%, rgba(0,0,0,0.39) 71%, rgba(0,0,0,0) 100%);
-    width: 20%;
-    height: 8rem;
-    left: 19em;
-    bottom: 25rem;
-    transform: rotate(-90deg);
-    z-index: 2;
-}
-
-#rightbox {
-    position: absolute;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 38%, rgba(0,0,0,0.39) 71%, rgba(0,0,0,0) 100%);
-    width: 20%;
-    height: 8rem;
-    right: -5rem;
-    bottom: 25rem;
-    transform: rotate(90deg);
-    z-index: 2;
-}
-
-#leftarrow {
-    transform: rotate(-90deg);
-    position: relative;
-    text-align: center;
-    margin: auto;
-    margin-left: -1rem;
-    margin-top: -0.5rem;
-}
-
-#rightarrow {
-    transform: rotate(-90deg);
-    position: relative;
-    text-align: center;
-    margin: auto;
-    margin-left: -1rem;
-    margin-top: -0.5rem;
 }
 
 #home-button {
     position: absolute;
     width: 5rem;
     height: 5rem;
+    display: block;
     top: 56rem;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
+    box-shadow: none;
+    background: transparent;
 }
+
+/* 
+#home-bar {
+    display: block;
+    width: 100%;
+    height: 5.3rem;
+    margin-top: 5rem;
+} */

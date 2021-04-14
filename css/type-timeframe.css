@@ -5,7 +5,10 @@ body {
 }
 
 nav {
-    margin: -1rem 1rem auto -2rem;
+    position: relative;
+    align-items: center;
+    margin-left: 1.5rem;
+    width: 95%;
 }
 
 ul {
@@ -22,6 +25,7 @@ li {
 h1 {
     color: #4E4BF0;
     font-size: 3rem;
+    line-height: 3.5rem;
     text-align: center;
     margin-left: 30rem;
     margin-right: 30rem;
@@ -47,8 +51,8 @@ h2 {
     height: 2.2rem;
     border-radius: 50%;
     display: inline-block;
-    background: #86D38F;
-    border: 0.3rem solid #69B972;
+    background: #41E091;
+    border: 0.3rem solid #17B968;
 }
 
 #redCircle {
@@ -56,9 +60,9 @@ h2 {
     height: 2.2rem;
     border-radius: 50%;
     display: inline-block;
-    background: #E35748;
-    border: 0.3rem solid #B63D30;
-    opacity: 0.5;
+    background: #EB4343;
+    border: 0.3rem solid #CE3232;
+    opacity: 0.3;
 }
 
 #yellowCircle {
@@ -66,9 +70,9 @@ h2 {
     height: 2.2rem;
     border-radius: 50%;
     display: inline-block;
-    background: #FEE615;
-    border: 0.3rem solid #CDB805;
-    opacity: 0.5;
+    background: #FCE72E;
+    border: 0.3rem solid #E6D115;
+    opacity: 0.3;
 }
 
 #blueCircle {
@@ -76,8 +80,8 @@ h2 {
     height: 2.2rem;
     border-radius: 50%;
     display: inline-block;
-    background: #518DD3;
-    border: 0.3rem solid #3D75B6;
+    background: #4499FB;
+    border: 0.3rem solid #2774CC;
 }
 
 .brand-container {
@@ -92,8 +96,9 @@ h2 {
 }
 
 .type-container {
-    margin-left: 3rem;
+    margin-left: 4rem;
     margin-top: 5rem;
+    width: 10rem;
 }
 
 h3 {
@@ -112,10 +117,10 @@ h3:hover {
     display: flex;
     position: fixed;
     right: 7rem;
-    bottom: 6rem;
+    bottom: 5rem;
     width: 70%;
-    height: 80rem;
-    overflow: scroll;
+    height: 50rem;
+    overflow-x: scroll;
     cursor: ew-resize;
 }
 
@@ -130,6 +135,57 @@ h3:hover {
 h4 {
     color: white;
     margin-top: 2rem;
+}
+
+h5 {
+    color: white;
+    font-size: 3rem;
+    z-index: 3;
+}
+
+#timelinebar {
+    border-top: 0.4rem solid white;
+    width: 89rem;
+    margin-top: -1rem;
+    margin-left: 22rem;
+}
+
+#leftbox {
+    position: absolute;
+    background: rgba(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+    width: 8rem;
+    height: 30rem;
+    left: 21rem;
+    bottom: 7rem;
+    z-index: 2;
+}
+
+#leftarrow {
+    position: relative;
+    margin: auto;
+    margin-left: -2rem;
+    margin-top: 13rem;
+    text-align: center;
+}
+
+#rightbox {
+    position: absolute;
+    background: rgba(0,0,0);
+    background: linear-gradient(-90deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+    width: 8rem;
+    height: 30rem;
+    right: 1rem;
+    bottom: 7rem;
+    z-index: 2;
+}
+
+#rightarrow {
+    position: relative;
+    margin: auto;
+    margin-left: 2rem;
+    margin-top: 13rem;
+    text-align: center;
 }
 
 img {
@@ -155,71 +211,16 @@ img:hover {
     z-index: 3;
 }
 
-h5 {
-    color: white;
-    font-size: 3rem;
-    z-index: 3;
-}
-
-#timelinebar {
-    border-top: 0.4rem solid white;
-    width: 84rem;
-    margin-left: 25rem;
-    margin-top: -2rem;
-}
-
-#leftbox {
-    position: absolute;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 38%, rgba(0,0,0,0.39) 71%, rgba(0,0,0,0) 100%);
-    width: 8rem;
-    height: 30rem;
-    left: 21rem;
-    bottom: 7rem;
-    z-index: 2;
-}
-
-#rightbox {
-    position: absolute;
-    background: rgb(0,0,0);
-    background: linear-gradient(260deg, rgba(0,0,0,1) 38%, rgba(0,0,0,0.39) 71%, rgba(0,0,0,0) 100%);
-    width: 8rem;
-    height: 30rem;
-    right: 2rem;
-    bottom: 7rem;
-    z-index: 2;
-}
-
-#leftarrow {
-    position: relative;
-    margin: auto;
-    margin-left: -1rem;
-    margin-top: 13rem;
-    text-align: center;
-}
-
-#rightarrow {
-    position: relative;
-    margin: auto;
-    margin-left: -1rem;
-    margin-top: 13rem;
-    text-align: center;
-}
-
 #home-button {
     position: absolute;
-    width: 6%;
+    width: 5rem;
+    height: 5rem;
     display: block;
-    margin-top: 5.5rem;
-    margin-left: 49%;
-    margin-right: 50%;
-    pointer-events: none;
-}
-
-#home-bar {
-    display: block;
-    background: linear-gradient(180deg, rgba(7,12,73,1) 0%, rgba(62,72,204,0.7) 14%, rgba(84,96,255,0.7) 28%, rgba(52,61,183,0.65) 58%, rgba(0,5,70,0.1) 100%);
-    width: 100%;
-    height: 5.3rem;
-    margin-top: 5rem;
+    top: 56rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: none;
+    background: transparent;
 }

@@ -5,7 +5,10 @@ body {
 }
 
 nav {
-    margin: -1rem 1rem auto -2rem;
+    position: relative;
+    align-items: center;
+    margin-left: 1rem;
+    width: 95%;
 }
 
 ul {
@@ -22,9 +25,10 @@ li {
 h1 {
     color: #4E4BF0;
     font-size: 3rem;
+    line-height: 3.5rem;
     text-align: center;
-    margin-left: 30rem;
-    margin-right: 30rem;
+    margin-left: 33rem;
+    margin-right: 33rem;
 }
 
 h2 {
@@ -47,9 +51,9 @@ h2 {
     height: 2.2rem;
     border-radius: 50%;
     display: inline-block;
-    background: #86D38F;
-    border: 0.3rem solid #69B972;
-    opacity: 0.5;
+    background: #41E091;
+    border: 0.3rem solid #17B968;
+    opacity: 0.3;
 }
 
 #redCircle {
@@ -57,8 +61,8 @@ h2 {
     height: 2.2rem;
     border-radius: 50%;
     display: inline-block;
-    background: #E35748;
-    border: 0.3rem solid #B63D30;
+    background: #EB4343;
+    border: 0.3rem solid #CE3232;
 }
 
 #yellowCircle {
@@ -66,9 +70,9 @@ h2 {
     height: 2.2rem;
     border-radius: 50%;
     display: inline-block;
-    background: #FEE615;
-    border: 0.3rem solid #CDB805;
-    opacity: 0.5;
+    background: #FCE72E;
+    border: 0.3rem solid #E6D115;
+    opacity: 0.3;
 }
 
 #blueCircle {
@@ -76,24 +80,26 @@ h2 {
     height: 2.2rem;
     border-radius: 50%;
     display: inline-block;
-    background: #518DD3;
-    border: 0.3rem solid #3D75B6;
+    background: #4499FB;
+    border: 0.3rem solid #2774CC;
 }
 
 .brand-container {
     display: flex;
     position: relative;
-    margin-left: 3rem;
     width: 20rem;
-    height: 37rem;
+    height: 35rem;
+    margin-left: 4rem;
+    margin-top: 5rem;
     overflow-y: scroll;
     flex-direction: column;
 }
 
 h3 {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 0.1rem;
+    cursor: pointer;
 }
 
 h3:hover {
@@ -105,7 +111,7 @@ h3:hover {
     display: flex;
     position: fixed;
     margin-left: 23rem;
-    bottom: 7rem;
+    bottom: 5rem;
     width: 78%;
 }
 
@@ -123,7 +129,7 @@ h3:hover {
 h4 {
     color: white;
     margin-top: 1rem;
-    display: fixed;
+    font-size: 1.4rem;
     text-align: center;
 }
 
@@ -131,29 +137,6 @@ img {
     width: 100%;
     height: auto;
     margin-top: 1rem;
-}
-
-/* img:hover {
-    position: relative;
-    width: 700%;  
-    bottom: 10rem;
-    right: 20rem;
-    z-index: 2;
-} */
-
-#home-bar {
-    display: block;
-    background: linear-gradient(180deg, rgba(7,12,73,1) 0%, rgba(62,72,204,0.7) 14%, rgba(84,96,255,0.7) 28%, rgba(52,61,183,0.65) 58%, rgba(0,5,70,0.1) 100%);
-    width: 100%;
-    height: 5.3rem;
-    margin-top: 6rem;
-}
-
-#home-bar img {
-    width: 6%;
-    display: block;
-    margin: auto;
-    pointer-events: none;
 }
 
 h5 {
@@ -164,15 +147,25 @@ h5 {
 
 #upperbox {
     position: absolute;
-    background: rgb(180,101,0);
-    background: linear-gradient(180deg, rgba(180,101,0,0.7) 0%, rgba(251,145,9,0) 100%);
+    background: rgb(78,75,240);
+    background: linear-gradient(180deg, rgba(78,75,240,1) 16%, rgba(0,0,0,0) 100%);
     width: 15%;
     height: 4rem;
-    left: 2rem;
-    bottom: 47rem;
+    left: 3rem;
+    top: 16rem;
     z-index: 2;
 }
 
+#bottombox {
+    position: absolute;
+    background: rgb(78,75,240);
+    background: linear-gradient(0deg, rgba(78,75,240,1) 16%, rgba(0,0,0,0) 100%);
+    width: 15%;
+    height: 4rem;
+    left: 3rem;
+    bottom: 8rem;
+    z-index: 2;
+}
 
 #upperarrow {
     transform: rotate(-90deg);
@@ -180,26 +173,25 @@ h5 {
     text-align: center;
     margin: auto;
     margin-left: -1rem;
-    margin-top: -0.3rem;
-}
-
-#bottombox {
-    position: absolute;
-    background: rgb(180,101,0);
-    background: linear-gradient(180deg, rgba(180,101,0,0.7) 0%, rgba(251,145,9,0) 100%);
-    width: 15%;
-    height: 4rem;
-    left: 2rem;
-    bottom: 10rem;
-    transform: rotate(180deg);
-    z-index: 2;
+    margin-top: -0.8rem;
 }
 
 #bottomarrow {
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
     position: relative;
     text-align: center;
     margin: auto;
-    margin-left: -1rem;
-    margin-top: -0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+#home-button {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    top: 56rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }

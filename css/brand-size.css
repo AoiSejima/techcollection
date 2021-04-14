@@ -63,7 +63,6 @@ h2 {
     display: inline-block;
     background: #EB4343;
     border: 0.3rem solid #CE3232;
-    opacity: 0.3;
 }
 
 #yellowCircle {
@@ -82,24 +81,70 @@ h2 {
     display: inline-block;
     background: #4499FB;
     border: 0.3rem solid #2774CC;
+    opacity: 0.3;
 }
 
-.type-container {
+.brand-container {
+    display: flex;
+    position: relative;
+    width: 20rem;
+    height: 35rem;
     margin-left: 4rem;
     margin-top: 5rem;
-    width: 10rem;
+    overflow-y: scroll;
+    flex-direction: column;
 }
 
 h3 {
     color: white;
     font-size: 1.5rem;
-    line-height: 3rem;
+    line-height: 0.1rem;
     cursor: pointer;
 }
 
 h3:hover {
     color: #F0A71D;
     transition: all 0.2s ease-in-out;
+}
+
+#upperbox {
+    position: absolute;
+    background: rgb(78,75,240);
+    background: linear-gradient(180deg, rgba(78,75,240,1) 16%, rgba(0,0,0,0) 100%);
+    width: 15%;
+    height: 4rem;
+    left: 3rem;
+    top: 16rem;
+    z-index: 2;
+}
+
+#bottombox {
+    position: absolute;
+    background: rgb(78,75,240);
+    background: linear-gradient(0deg, rgba(78,75,240,1) 16%, rgba(0,0,0,0) 100%);
+    width: 15%;
+    height: 4rem;
+    left: 3rem;
+    bottom: 8rem;
+    z-index: 2;
+}
+
+#upperarrow {
+    transform: rotate(-90deg);
+    position: relative;
+    text-align: center;
+    margin: auto;
+    margin-left: -1rem;
+    margin-top: -0.8rem;
+}
+
+#bottomarrow {
+    transform: rotate(90deg);
+    position: relative;
+    text-align: center;
+    margin: auto;
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
 }
 
 .size-container {

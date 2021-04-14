@@ -7,21 +7,91 @@ h1 {
     position: relative;
     font-family: "Retro Gaming";
     color: #4E4BF0;
-    border: 1rem;
-    font-size: 15rem;
-    line-height: 15rem; 
-    text-align: center;
-    top: -1rem;
+    font-size: 13rem;
+}
+
+#above {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1.5rem;
+    align-content: center;
+    width: 40%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#below {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -16rem;
+    width: 93%;
+    height: auto;
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.up {
+    animation-name: bounce-up;
+    animation-duration: 4s; 
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+  
+@keyframes bounce-up {
+    0%   { transform: translateY(1rem); }
+    25%  { transform: translateY(-7rem); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+.down {
+    animation: bounce-down 2s ease-out infinite alternate;
+}
+  
+@keyframes bounce-down {
+    0%   { transform: translateY(0); }
+    25%  { transform: translateY(7rem); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+.rotate-left {
+    animation: rotate-left 4s ease-out infinite alternate;
+}
+  
+@keyframes rotate-left {
+    0%   { transform: rotate(0); }
+    25%  { transform: rotate(-90deg); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+.rotate-right {
+    animation: rotate-right 2s ease-out infinite alternate;
+}
+  
+@keyframes rotate-right {
+    0%   { transform: rotate(0); }
+    25%  { transform: rotate(90deg); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(0); }
+    100% { transform: translateY(0); }
 }
 
 #start {
-    position: relative;
+    position: absolute;
     font-family: "Retro Gaming";
     color: white;
     font-size: 5rem;
     text-decoration: none;
     text-align: center;
-    top: -1rem;
+    bottom: 7rem;
     left: 30rem;
 }
 
@@ -29,4 +99,3 @@ h1 {
     -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: #97958C;
 }
-

@@ -17,29 +17,23 @@ let submitButton = document.querySelector("input[value=Save]");
 
 // create an event listener to them form to listen for changes
 formButton.addEventListener("click", function() {
-
+    
     if (timeframeButton.checked && brandButton.checked) {
-        window.location.href = "./timeframe-brand.html";
+        window.location.href = "./brand-timeframe.html";
     }
-
     if (timeframeButton.checked && sizeButton.checked) {
         window.location.href = "./timeframe-size.html";
     }
-
     if (timeframeButton.checked && typeButton.checked) {
-        window.location.href = "./timeframe-type.html";
+        window.location.href = "./type-timeframe.html";
     }
-
     if (brandButton.checked && sizeButton.checked) {
-        window.location.href = "./size-brand.html";
+        window.location.href = "./brand-size.html";
     }
-
     if (brandButton.checked && typeButton.checked) {
-        window.location.href = "./type-brand.html";
+        window.location.href = "./brand-type.html";
     }
-
     if (sizeButton.checked && typeButton.checked) {
         window.location.href = "./type-size.html";
     }
-
 });
