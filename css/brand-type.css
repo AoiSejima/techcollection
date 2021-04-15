@@ -107,6 +107,10 @@ h3:hover {
     transition: all 0.2s ease-in-out;
 }
 
+.active h3 {
+    color: #F0A71D;
+}
+
 .type-container {
     display: flex;
     position: fixed;
@@ -168,21 +172,23 @@ h5 {
 }
 
 #upperarrow {
+    font-size: 2rem;
     transform: rotate(-90deg);
     position: relative;
     text-align: center;
     margin: auto;
-    margin-left: -1rem;
-    margin-top: -0.8rem;
+    margin-left: -0.1rem;
+    margin-top: -0.5;
 }
 
 #bottomarrow {
+    font-size: 2rem;
     transform: rotate(90deg);
     position: relative;
     text-align: center;
     margin: auto;
-    margin-left: 0.5rem;
-    margin-top: 0.8rem;
+    margin-left: -0.1rem;
+    margin-top: 1.5rem;
 }
 
 #home-button {

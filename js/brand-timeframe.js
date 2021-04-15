@@ -145,6 +145,24 @@ function showTechs() {
             document.querySelector(".y_NA").appendChild(techContainer);
         }
 
+        // Get all buttons with class="brand" inside the container
+        var activeBrand = document.getElementsByClassName("brand");
+
+        // Loop through the buttons and add the active class to the current/clicked button
+        for (var i = 0; i < activeBrand.length; i++) {
+          activeBrand[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+
+        if (techContainer.classList.contains("Apple")){
+          techContainer.style.display = "flex";
+        } else {
+          techContainer.style.display = "none";
+        }
+
         document.querySelector(".click-3Dconnexion").addEventListener("click", function () {
             if (techContainer.classList.contains("3Dconnexion")){
                   techContainer.style.display = "flex";
@@ -390,5 +408,30 @@ function showTechs() {
                   techContainer.style.display = "none";
                 }
         })
+
+        var rightArrow = document.getElementById('rightarrow');
+        rightArrow.onclick = function () {
+            var container = document.getElementById('year-container');
+            sideScroll(container,'right',25,350,10);
+        };
+        var leftArrow = document.getElementById('leftarrow');
+        leftArrow.onclick = function () {
+            var container = document.getElementById('year-container');
+            sideScroll(container,'left',25,350,10);
+        };
+        function sideScroll(element,direction,speed,distance,step){
+            scrollAmount = 0;
+            var slideTimer = setInterval(function(){
+                if(direction == 'left'){
+                    element.scrollLeft -= step;
+                } else {
+                    element.scrollLeft += step;
+                }
+                scrollAmount += step;
+                if(scrollAmount >= distance){
+                    window.clearInterval(slideTimer);
+                }
+            }, speed);
+        }
 });
 }

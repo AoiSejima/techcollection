@@ -102,6 +102,10 @@ h3:hover {
     transition: all 0.2s ease-in-out;
 }
 
+.active h3 {
+    color: #F0A71D;
+}
+
 .size-container {
     width: 75rem;
     height: 48rem;
@@ -176,21 +180,25 @@ h6 {
 }
 
 #leftarrow {
-    transform: rotate(-90deg);
+    font-size: 4rem;
+    transform: rotate(90deg);
     position: relative;
     text-align: center;
     margin: auto;
     margin-left: -1rem;
-    margin-top: -0.5rem;
+    margin-top: -2rem;
+    cursor: pointer;
 }
 
 #rightarrow {
+    font-size: 4rem;
     transform: rotate(-90deg);
     position: relative;
     text-align: center;
     margin: auto;
     margin-left: -1rem;
     margin-top: -0.5rem;
+    cursor: pointer;
 }
 
 #home-button {

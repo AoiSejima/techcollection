@@ -72,9 +72,9 @@ function showTechs() {
 
         let techSize = tech.fields.size;
 
-        let techYear = tech.fields.year;     
+        let techBrand = tech.fields.brand;     
 
-        techContainer.classList.add(techYear);
+        techContainer.classList.add(techBrand);
 
         if (techSize == '0') {
             document.querySelector(".s_0").appendChild(techContainer);
@@ -108,6 +108,24 @@ function showTechs() {
         }
         if (techSize == '10') {
             document.querySelector(".s_10").appendChild(techContainer);
+        }
+
+        // Get all buttons with class="brand" inside the container
+        var activeBrand = document.getElementsByClassName("brand");
+
+        // Loop through the buttons and add the active class to the current/clicked button
+        for (var i = 0; i < activeBrand.length; i++) {
+          activeBrand[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+
+        if (techContainer.classList.contains("Apple")){
+          techContainer.style.display = "flex";
+        } else {
+          techContainer.style.display = "none";
         }
 
         document.querySelector(".click-3Dconnexion").addEventListener("click", function () {
@@ -355,5 +373,30 @@ function showTechs() {
                   techContainer.style.display = "none";
                 }
         })
+
+        var rightArrow = document.getElementById('rightarrow');
+        rightArrow.onclick = function () {
+            var container = document.getElementById('size-container');
+            sideScroll(container,'right',25,350,10);
+        };
+        var leftArrow = document.getElementById('leftarrow');
+        leftArrow.onclick = function () {
+            var container = document.getElementById('size-container');
+            sideScroll(container,'left',25,350,10);
+        };
+        function sideScroll(element,direction,speed,distance,step){
+            scrollAmount = 0;
+            var slideTimer = setInterval(function(){
+                if(direction == 'left'){
+                    element.scrollLeft -= step;
+                } else {
+                    element.scrollLeft += step;
+                }
+                scrollAmount += step;
+                if(scrollAmount >= distance){
+                    window.clearInterval(slideTimer);
+                }
+            }, speed);
+        }
 });
 }

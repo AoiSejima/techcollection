@@ -145,77 +145,104 @@ function showTechs() {
             document.querySelector(".y_NA").appendChild(techContainer);
         }
 
-        document.querySelector(".click-phone").addEventListener("click", function () {
+        // Get all buttons with class="type" inside the container
+        var activeType = document.getElementsByClassName("type");
 
+        // Loop through the buttons and add the active class to the current/clicked button
+        for (var i = 0; i < activeType.length; i++) {
+            activeType[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+            });
+        }
+
+        if (techContainer.classList.contains("phone")){
+            techContainer.style.display = "flex";
+        } else {
+            techContainer.style.display = "none";
+        }
+
+        document.querySelector(".click-phone").addEventListener("click", function () {
             if (techContainer.classList.contains("phone")){
                   techContainer.style.display = "flex";
                 } else {
                   techContainer.style.display = "none";
                 }
-
         })
         document.querySelector(".click-tablet").addEventListener("click", function () {
-
             if (techContainer.classList.contains("tablet")){
                   techContainer.style.display = "flex";
                 } else {
                   techContainer.style.display = "none";
                 }
-
         })
         document.querySelector(".click-computer").addEventListener("click", function () {
-
             if (techContainer.classList.contains("computer")){
                   techContainer.style.display = "flex";
                 } else {
                   techContainer.style.display = "none";
                 }
-
         })
         document.querySelector(".click-keyboard").addEventListener("click", function () {
-
             if (techContainer.classList.contains("keyboard")){
                   techContainer.style.display = "flex";
                 } else {
                   techContainer.style.display = "none";
                 }
-
         })
         document.querySelector(".click-mouse").addEventListener("click", function () {
-
             if (techContainer.classList.contains("mouse")){
                   techContainer.style.display = "flex";
                 } else {
                   techContainer.style.display = "none";
                 }
-
         })
         document.querySelector(".click-watch").addEventListener("click", function () {
-
             if (techContainer.classList.contains("watch")){
                   techContainer.style.display = "flex";
                 } else {
                   techContainer.style.display = "none";
                 }
-
         })
         document.querySelector(".click-game").addEventListener("click", function () {
-
             if (techContainer.classList.contains("game")){
                   techContainer.style.display = "flex";
                 } else {
                   techContainer.style.display = "none";
                 }
-
         })
         document.querySelector(".click-music").addEventListener("click", function () {
-
             if (techContainer.classList.contains("music")){
                   techContainer.style.display = "flex";
                 } else {
                   techContainer.style.display = "none";
                 }
-
         })
+
+        var rightArrow = document.getElementById('rightarrow');
+        rightArrow.onclick = function () {
+            var container = document.getElementById('year-container');
+            sideScroll(container,'right',25,350,10);
+        };
+        var leftArrow = document.getElementById('leftarrow');
+        leftArrow.onclick = function () {
+            var container = document.getElementById('year-container');
+            sideScroll(container,'left',25,350,10);
+        };
+        function sideScroll(element,direction,speed,distance,step){
+            scrollAmount = 0;
+            var slideTimer = setInterval(function(){
+                if(direction == 'left'){
+                    element.scrollLeft -= step;
+                } else {
+                    element.scrollLeft += step;
+                }
+                scrollAmount += step;
+                if(scrollAmount >= distance){
+                    window.clearInterval(slideTimer);
+                }
+            }, speed);
+        }
 });
 }
