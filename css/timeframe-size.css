@@ -1,8 +1,14 @@
+@font-face {
+    font-family: "Retro Gaming";
+    src: url('./assets/fonts/retro-gaming.ttf');
+}
+
 body {
     background: black;
     margin: 0 auto;
-    font-family: "Retro Gaming";
+    font-family: "Retro Gaming", sans-serif;
 }
+
 
 nav {
     position: relative;
@@ -158,54 +164,51 @@ h3:hover {
 
 #leftbox {
     position: absolute;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 38%, rgba(0,0,0,0.39) 71%, rgba(0,0,0,0) 100%);
-    width: 20%;
-    height: 8rem;
-    left: 19em;
-    bottom: 25rem;
-    transform: rotate(-90deg);
+    background: rgba(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+    width: 8rem;
+    height: 25rem;
+    left: 26rem;
+    bottom: 19rem;
     z-index: 2;
 }
 
 #rightbox {
     position: absolute;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 38%, rgba(0,0,0,0.39) 71%, rgba(0,0,0,0) 100%);
-    width: 20%;
-    height: 8rem;
-    right: -5rem;
-    bottom: 25rem;
-    transform: rotate(90deg);
+    background: rgba(0,0,0);
+    background: linear-gradient(-90deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+    width: 8rem;
+    height: 25rem;
+    right: 5rem;
+    bottom: 19rem;
     z-index: 2;
 }
 
 #leftarrow {
-    font-size: 4rem;
-    transform: rotate(90deg);
+    transform: rotate(180deg);
+    font-size: 3rem;
     position: relative;
-    text-align: center;
     margin: auto;
-    margin-left: -1rem;
-    margin-top: -2rem;
+    margin-left: -6rem;
+    margin-top: 13rem;
+    text-align: center;
     cursor: pointer;
 }
 
 #rightarrow {
-    font-size: 4rem;
-    transform: rotate(-90deg);
+    font-size: 3rem;
     position: relative;
-    text-align: center;
     margin: auto;
-    margin-left: -1rem;
-    margin-top: -0.5rem;
+    margin-left: 6rem;
+    margin-top: 13rem;
+    text-align: center;
     cursor: pointer;
 }
 
 .size-container {
     width: 75rem;
     height: 48rem;
-    margin-left: 30rem;
+    margin-left: 29rem;
     margin-top: -31rem;
     display: flex;
     position: fixed;
@@ -218,21 +221,20 @@ h3:hover {
     display: flex;
 }
 
+h4 {
+    display: none;
+}
+
 img {
     width: 20rem;
     height: 20rem;
     object-fit: scale-down;
-    margin: 1rem;
-}
-
-h4 {
-    display: none;
+    margin: 0.5rem;
 }
 
 h5 {
     color: white;
     font-size: 2rem;
-
 }
 
 #small {
@@ -241,56 +243,8 @@ h5 {
 }
 
 #large {
-    margin-left: 102rem;
+    margin-left: 100rem;
     margin-top: -6rem;
-}
-
-h6 {
-    color: white;
-    font-size: 3rem;
-    z-index: 3;
-}
-
-#leftbox {
-    position: absolute;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 38%, rgba(0,0,0,0.39) 71%, rgba(0,0,0,0) 100%);
-    width: 20%;
-    height: 8rem;
-    left: 19em;
-    bottom: 25rem;
-    transform: rotate(-90deg);
-    z-index: 2;
-}
-
-#rightbox {
-    position: absolute;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 38%, rgba(0,0,0,0.39) 71%, rgba(0,0,0,0) 100%);
-    width: 20%;
-    height: 8rem;
-    right: -5rem;
-    bottom: 25rem;
-    transform: rotate(90deg);
-    z-index: 2;
-}
-
-#leftarrow {
-    transform: rotate(-90deg);
-    position: relative;
-    text-align: center;
-    margin: auto;
-    margin-left: -1rem;
-    margin-top: -0.5rem;
-}
-
-#rightarrow {
-    transform: rotate(-90deg);
-    position: relative;
-    text-align: center;
-    margin: auto;
-    margin-left: -1rem;
-    margin-top: -0.5rem;
 }
 
 #home-button {
@@ -302,4 +256,154 @@ h6 {
     left: 0;
     right: 0;
     margin: auto;
+}
+
+@media only screen and (max-width: 812px) {
+
+    nav {
+        margin-top: -0.5rem;
+        margin-left: 10rem;
+        width: 55%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin-left: 11rem;
+        margin-right: 14rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+
+    #circles {
+        height: 1%;
+        grid-gap: 0.2rem;
+    }
+    
+    #greenCircle {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 0.1rem solid #17B968;
+    }
+    
+    #redCircle {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 0.1rem solid #CE3232;
+    }
+    
+    #yellowCircle {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 0.1rem solid #E6D115;
+    }
+    
+    #blueCircle {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 0.1rem solid #2774CC;
+    }
+
+    .year-container {
+        width: 6rem;
+        height: 14rem;
+        margin-left: 2rem;
+        margin-top: -0.5rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+        margin-bottom: -0.5rem;
+    }
+
+    #topbox {
+        width: 6rem;
+        height: 2rem;
+        left: 2rem;
+        top: 6rem;
+    }
+    
+    #bottombox {
+        width: 6rem;
+        height: 2rem;
+        left: 2rem;
+        bottom: 2rem;
+    }
+    
+    #toparrow {
+        font-size: 1.5rem;
+        margin-top: -0.5;
+    }
+    
+    #bottomarrow {
+        font-size: 1.5rem;
+        margin-top: 0.2rem;
+    }
+    
+    #rightbox {
+        width: 3rem;
+        height: 11rem;
+        right: 2.5rem;
+        bottom: 5rem;
+    }
+    
+    #leftbox {
+        width: 3rem;
+        height: 11rem;
+        left: 13rem;
+        bottom: 5rem;
+    }
+    
+    #leftarrow {
+        font-size: 2.5rem;
+        margin-left: -2rem;
+        margin-top: 4rem;
+    }
+    
+    #rightarrow {
+        font-size: 2.5rem;
+        margin-left: 2.5rem;
+        margin-top: 4rem;
+    }
+
+    .size-container {
+        width: 34rem;
+        margin-left: 13rem;
+        margin-top: -12rem;
+    }
+
+    .size {
+        margin: 0.1rem;
+        padding: 0.5rem;
+    }
+
+    img {
+        width: 8rem;
+        height: 8rem;
+        margin: 0.3rem;
+    }
+
+    h5 {
+        font-size: 1.2rem;
+    }
+
+    #small {
+        margin-left: 13rem;
+        margin-top: -2rem;
+    }
+
+    #large {
+        margin-left: 43.5rem;
+        margin-top: -3.5rem;
+    }
+
+    #home-button {
+        width: 3.5rem;
+        height: 3.5rem;
+        top: 19.5rem;
+    }
 }

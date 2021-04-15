@@ -1,8 +1,13 @@
+@font-face {
+    font-family: "Retro Gaming";
+    src: url('./assets/fonts/retro-gaming.ttf');
+}
+
 body {
     /* background: #D0CFCA; */
     background: #ade0ff;
     margin: 0 auto;
-    font-family: "Retro Gaming";
+    font-family: "Retro Gaming", sans-serif;
 }
 
 nav {
@@ -55,7 +60,7 @@ h4 {
 
 main {
     position: absolute;
-    margin-top: -9rem;
+    margin-top: -9.5rem;
     margin-left: 39rem;
     z-index: 2;
 }
@@ -252,7 +257,7 @@ label:before {
     }
     
     main {
-        margin-top: -8.3rem;
+        margin-top: -8rem;
         margin-left: 18rem;
     }
     

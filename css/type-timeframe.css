@@ -1,14 +1,19 @@
+@font-face {
+    font-family: "Retro Gaming";
+    src: url('./assets/fonts/retro-gaming.ttf');
+}
+
 body {
     background: black;
     margin: 0 auto;
-    font-family: "Retro Gaming";
+    font-family: "Retro Gaming", sans-serif;
 }
 
 nav {
     position: relative;
     align-items: center;
-    margin-left: 1.5rem;
-    width: 95%;
+    margin-left: -1rem;
+    width: 100%;
 }
 
 ul {
@@ -27,8 +32,8 @@ h1 {
     font-size: 3rem;
     line-height: 3.5rem;
     text-align: center;
-    margin-left: 30rem;
-    margin-right: 30rem;
+    margin-left: 23rem;
+    margin-right: 31rem;
 }
 
 h2 {
@@ -103,8 +108,8 @@ h2 {
 
 h3 {
     color: white;
-    font-size: 1.5rem;
-    line-height: 3rem;
+    font-size: 2rem;
+    line-height: 2rem;
     cursor: pointer;
 }
 
@@ -121,9 +126,9 @@ h3:hover {
     display: flex;
     position: fixed;
     right: 7rem;
-    bottom: 5rem;
+    bottom: 9rem;
     width: 70%;
-    height: 50rem;
+    height: 37rem;
     overflow-x: scroll;
     cursor: ew-resize;
 }
@@ -138,7 +143,7 @@ h3:hover {
 
 h4 {
     color: white;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 h5 {
@@ -150,7 +155,7 @@ h5 {
 #timelinebar {
     border-top: 0.4rem solid white;
     width: 89rem;
-    margin-top: -1rem;
+    margin-top: -1.5rem;
     margin-left: 22rem;
 }
 
@@ -198,6 +203,7 @@ img {
     width: 5rem;
     height: 5rem;
     object-fit: scale-down;
+    margin-bottom: -0.6rem;
 }
 
 img:hover {
@@ -229,4 +235,132 @@ img:hover {
     margin: auto;
     box-shadow: none;
     background: transparent;
+}
+
+@media only screen and (max-width: 812px) {
+
+    nav {
+        margin-top: -0.5rem;
+        margin-left: 10rem;
+        width: 55%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin-left: 11rem;
+        margin-right: 14rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+
+    #circles {
+        height: 1%;
+        grid-gap: 0.2rem;
+    }
+    
+    #greenCircle {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 0.1rem solid #17B968;
+    }
+    
+    #redCircle {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 0.1rem solid #CE3232;
+    }
+    
+    #yellowCircle {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 0.1rem solid #E6D115;
+    }
+    
+    #blueCircle {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 0.1rem solid #2774CC;
+    }
+
+    .type-container {
+        margin-left: 2rem;
+        margin-top: 0.5rem;
+        width: 8rem;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+        margin-bottom: -0.5rem;
+    }
+    
+    .year-container {
+        right: 3rem;
+        bottom: 3rem;
+        width: 60%;
+        height: 13.5rem;
+    }
+    
+    .year {
+        margin: -0.2rem;
+    }
+    
+    h4 {
+        margin-top: 0.8rem;
+        font-size: 1.1rem;
+    }
+    
+    #timelinebar {
+        border-top: 0.3rem solid white;
+        width: 33rem;
+        margin-top: -4.5rem;
+        margin-left: 16rem;
+    }
+    
+    #rightbox {
+        width: 3rem;
+        height: 13rem;
+        right: 1rem;
+        bottom: 3rem;
+    }
+    
+    #leftbox {
+        width: 3rem;
+        height: 13rem;
+        left: 15rem;
+        bottom: 3rem;
+    }
+    
+    #leftarrow {
+        font-size: 3rem;
+        margin-left: -1rem;
+        margin-top: 4rem;
+    }
+    
+    #rightarrow {
+        font-size: 3rem;
+        margin-left: 1rem;
+        margin-top: 4rem;
+    }
+    
+    img {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: -0.2rem;
+    }
+    
+    img:hover {
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    #home-button {
+        width: 3.5rem;
+        height: 3.5rem;
+        top: 19.5rem;
+    }
 }

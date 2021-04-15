@@ -1,8 +1,12 @@
+@font-face {
+    font-family: "Retro Gaming";
+    src: url('./assets/fonts/retro-gaming.ttf');
+}
+
 body {
     background: black;
     margin: 2rem;
-    font-family: "Retro Gaming";
-    src: url('./assets/fonts/retro-gaming.ttf');
+    font-family: "Retro Gaming", sans-serif;
 }
 
 h1 {

@@ -138,7 +138,7 @@ h4 {
 #timelinebar {
     border-top: 0.4rem solid white;
     width: 89rem;
-    margin-top: -1rem;
+    margin-top: -0.5rem;
     margin-left: 22rem;
 }
 
@@ -279,20 +279,20 @@ img:hover {
 
     nav {
         margin-top: -0.5rem;
-        margin-left: 11.4rem;
-        width: 50%;
+        margin-left: 10rem;
+        width: 55%;
     }
 
     h1 {
         font-size: 1.5rem;
         line-height: 1.5rem;
         margin-left: 11rem;
-        margin-right: 13rem;
+        margin-right: 14rem;
     }
 
     h2 {
-        font-size: 1.2rem;
-        line-height: 1.2rem;
+        font-size: 1.1rem;
+        line-height: 1.3rem;
     }
 
     #circles {
@@ -303,34 +303,34 @@ img:hover {
     #greenCircle {
         width: 1.2rem;
         height: 1.2rem;
-        border: 0.2rem solid #17B968;
+        border: 0.1rem solid #17B968;
     }
     
     #redCircle {
         width: 1.2rem;
         height: 1.2rem;
-        border: 0.2rem solid #CE3232;
+        border: 0.1rem solid #CE3232;
     }
     
     #yellowCircle {
         width: 1.2rem;
         height: 1.2rem;
-        border: 0.2rem solid #E6D115;
+        border: 0.1rem solid #E6D115;
     }
     
     #blueCircle {
         width: 1.2rem;
         height: 1.2rem;
-        border: 0.2rem solid #2774CC;
+        border: 0.1rem solid #2774CC;
     }
 
     .brand-container {
         width: 11rem;
         height: 14rem;
-        margin-left: 2rem;
+        margin-left: 2.2rem;
         margin-top: -1rem;
     }
-    
+
     h3 {
         font-size: 1.1rem;
         line-height: 1.2rem;
@@ -339,9 +339,9 @@ img:hover {
     
     .year-container {
         right: 3rem;
-        bottom: 2rem;
+        bottom: 3rem;
         width: 60%;
-        height: 20rem;
+        height: 13.5rem;
     }
     
     .year {
@@ -356,7 +356,7 @@ img:hover {
     #timelinebar {
         border-top: 0.3rem solid white;
         width: 33rem;
-        margin-top: -2.5rem;
+        margin-top: -3.5rem;
         margin-left: 16rem;
     }
     
@@ -372,6 +372,7 @@ img:hover {
         height: 2rem;
         left: 2rem;
         bottom: 2rem;
+        position: fixed;
     }
     
     #toparrow {
@@ -386,33 +387,34 @@ img:hover {
     
     #rightbox {
         width: 3rem;
-        height: 15rem;
+        height: 13rem;
         right: 1rem;
-        bottom: 2rem;
+        bottom: 3rem;
     }
     
     #leftbox {
         width: 3rem;
-        height: 15rem;
+        height: 13rem;
         left: 15rem;
-        bottom: 2rem;
+        bottom: 3rem;
     }
     
     #leftarrow {
         font-size: 3rem;
         margin-left: -1rem;
-        margin-top: 6rem;
+        margin-top: 4rem;
     }
     
     #rightarrow {
         font-size: 3rem;
         margin-left: 1rem;
-        margin-top: 6rem;
+        margin-top: 4rem;
     }
     
     img {
         width: 3rem;
         height: 3rem;
+        margin-bottom: -0.2rem;
     }
     
     img:hover {
