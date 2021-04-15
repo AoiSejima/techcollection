@@ -222,13 +222,13 @@ function showTechs() {
 
         var rightArrow = document.getElementById('rightarrow');
         rightArrow.onclick = function () {
-            var container = document.getElementById('year-container');
-            sideScroll(container,'right',25,350,10);
+            var yearContainer = document.getElementById('year-container');
+            sideScroll(yearContainer,'right',25,350,10);
         };
         var leftArrow = document.getElementById('leftarrow');
         leftArrow.onclick = function () {
-            var container = document.getElementById('year-container');
-            sideScroll(container,'left',25,350,10);
+            var yearContainer = document.getElementById('year-container');
+            sideScroll(yearContainer,'left',25,350,10);
         };
         function sideScroll(element,direction,speed,distance,step){
             scrollAmount = 0;

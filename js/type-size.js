@@ -187,13 +187,13 @@ function showTechs() {
 
         var rightArrow = document.getElementById('rightarrow');
         rightArrow.onclick = function () {
-            var container = document.getElementById('size-container');
-            sideScroll(container,'right',25,350,10);
+            var sizeContainer = document.getElementById('size-container');
+            sideScroll(sizeContainer,'right',25,450,10);
         };
         var leftArrow = document.getElementById('leftarrow');
         leftArrow.onclick = function () {
-            var container = document.getElementById('size-container');
-            sideScroll(container,'left',25,350,10);
+            var sizeContainer = document.getElementById('size-container');
+            sideScroll(sizeContainer,'left',25,450,10);
         };
         function sideScroll(element,direction,speed,distance,step){
             scrollAmount = 0;

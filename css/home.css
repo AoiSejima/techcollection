@@ -78,11 +78,6 @@ h3, label {
     text-align: center;
 }
 
-input {
-    width: 2rem;
-    height: 2rem;
-}
-
 img {
     position: absolute;
     display: flex;
@@ -122,8 +117,6 @@ label {
     height: 18rem;
     border-radius: 50%;
     cursor: pointer;
-    width: 18rem;
-    height: 18rem;
 }
   
 label:before {
@@ -157,7 +150,7 @@ label:before {
 }
 
 .greenCircle {
-    background: #41E091;
+    background: #44d48c;
     border: 0.5rem solid #17B968;
     white-space: pre-wrap;
 }
@@ -233,4 +226,100 @@ label:before {
 @keyframes right-left-two { 
     0%   { transform: translateX(-25rem); }
     100%  { transform: translateX(100rem); }
+}
+
+@media only screen and (max-width: 812px) { 
+
+    nav {
+        margin: -1rem 1rem auto -1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        margin-right: 30rem;
+    }
+    
+    h4 {
+        font-size: 3rem;
+        margin-left: 1.2rem;
+        margin-top: 14rem;
+    }
+    
+    main {
+        margin-top: -8.3rem;
+        margin-left: 18rem;
+    }
+    
+    #button-container {
+        grid-gap: 1rem;
+    }
+    
+    h3, label {
+        -webkit-text-stroke-width: 1px;
+        font-size: 1.7rem;    
+        line-height: 1.7rem;
+    }
+      
+    input {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+      
+    label {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+      
+    label:before {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+
+    .greenCircle {
+        border: 0.3rem solid #17B968;
+    }
+    
+    .redCircle {
+        border: 0.3rem solid #CE3232;
+    }
+    
+    .yellowCircle {
+        border: 0.3rem solid #E6D115;
+    }
+    
+    .blueCircle {
+        border: 0.3rem solid #2774CC;
+    }
+
+    img {
+        width: 20%;
+        margin-top: 11.8rem;
+        margin-left: 4.9rem;
+    }
+
+    #animation-container {
+        top: 0rem;
+    }
+    
+    #cloud-top-animation {
+        animation: left-right 13s linear infinite;
+        width: 16%;
+        top: -18rem;
+    }
+    #cloud-middle-animation {
+        animation: right-left-one 17s linear infinite;
+        width: 16%;
+        top: -16rem;
+    }
+    #cloud-bottom-animation {
+        animation: right-left-two 20s linear infinite;
+        width: 23%;
+        top: -14rem;
+    }
 }

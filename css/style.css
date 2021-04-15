@@ -1,11 +1,11 @@
 body {
     background: black;
     margin: 2rem;
+    font-family: "Retro Gaming";
 }
 
 h1 {
     position: relative;
-    font-family: "Retro Gaming";
     color: #4E4BF0;
     font-size: 13rem;
 }
@@ -86,7 +86,6 @@ h1 {
 
 #start {
     position: absolute;
-    font-family: "Retro Gaming";
     color: white;
     font-size: 5rem;
     text-decoration: none;
@@ -102,4 +101,26 @@ h1 {
 
 @media only screen and (max-width: 812px) { 
 
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #above {
+        margin-top: 12rem;
+        width: 40%;
+    }
+    
+    #below {
+        margin-top: 0rem;
+        width: 95%;
+    }
+
+    #start {
+        font-size: 2rem;
+        left: 2rem;
+    }
+
+    #start:hover {
+        -webkit-text-stroke-width: 2px;
+    }
 }

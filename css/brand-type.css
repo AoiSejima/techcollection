@@ -149,7 +149,7 @@ h5 {
     z-index: 3;
 }
 
-#upperbox {
+#topbox {
     position: absolute;
     background: rgb(78,75,240);
     background: linear-gradient(180deg, rgba(78,75,240,1) 16%, rgba(0,0,0,0) 100%);
@@ -171,7 +171,7 @@ h5 {
     z-index: 2;
 }
 
-#upperarrow {
+#toparrow {
     font-size: 2rem;
     transform: rotate(-90deg);
     position: relative;
@@ -179,6 +179,7 @@ h5 {
     margin: auto;
     margin-left: -0.1rem;
     margin-top: -0.5;
+    cursor: pointer;
 }
 
 #bottomarrow {
@@ -189,6 +190,7 @@ h5 {
     margin: auto;
     margin-left: -0.1rem;
     margin-top: 1.5rem;
+    cursor: pointer;
 }
 
 #home-button {

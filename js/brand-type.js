@@ -369,5 +369,36 @@ function showTechs() {
                   techContainer.style.display = "none";
                 }
         })
+
+        var topArrow = document.getElementById('toparrow');
+        topArrow.onclick = function () {
+            var brandContainer = document.getElementById('brand-container');
+            brandContainer.scrollBy({
+              top: -200,
+              behavior: 'smooth'
+            });
+        };
+        var bottomArrow = document.getElementById('bottomarrow');
+        bottomArrow.onclick = function () {
+            var brandContainer = document.getElementById('brand-container');
+            brandContainer.scrollBy({
+              top: 200,
+              behavior: 'smooth'
+            });
+        };
+        function sideScroll(element,direction,speed,distance,step){
+            scrollAmount = 0;
+            var slideTimer = setInterval(function(){
+                if(direction == 'down'){
+                    element.scrollBy(300, 300);
+                } else {
+                    element.scrollBy(300, 300);
+                }
+                scrollAmount += step;
+                if(scrollAmount >= distance){
+                    window.clearInterval(slideTimer);
+                }
+            }, speed);
+        }
 });
 }

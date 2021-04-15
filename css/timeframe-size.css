@@ -112,7 +112,7 @@ h3:hover {
     color: #F0A71D;
 }
 
-#upperbox {
+#topbox {
     position: absolute;
     background: rgb(78,75,240);
     background: linear-gradient(180deg, rgba(78,75,240,1) 16%, rgba(0,0,0,0) 100%);
@@ -134,7 +134,7 @@ h3:hover {
     z-index: 2;
 }
 
-#upperarrow {
+#toparrow {
     font-size: 2rem;
     transform: rotate(-90deg);
     position: relative;
@@ -142,6 +142,7 @@ h3:hover {
     margin: auto;
     margin-left: -0.1rem;
     margin-top: -0.5;
+    cursor: pointer;
 }
 
 #bottomarrow {
@@ -152,6 +153,7 @@ h3:hover {
     margin: auto;
     margin-left: -0.1rem;
     margin-top: 1.5rem;
+    cursor: pointer;
 }
 
 #leftbox {
