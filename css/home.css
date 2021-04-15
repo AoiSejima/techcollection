@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Retro Gaming";
-    src: url('./assets/fonts/retro-gaming.ttf');
+    src: url('/assets/fonts/retro-gaming.ttf');
 }
 
 body {
@@ -50,7 +50,7 @@ a {
 }
 
 h4 {
-    position: relative;
+    position: fixed;
     color: #4E4BF0;
     font-size: 5rem;
     text-align: left;
@@ -59,7 +59,7 @@ h4 {
 }
 
 main {
-    position: absolute;
+    position: fixed;
     margin-top: -9.5rem;
     margin-left: 39rem;
     z-index: 2;
@@ -253,7 +253,7 @@ label:before {
     h4 {
         font-size: 3rem;
         margin-left: 1.2rem;
-        margin-top: 14rem;
+        margin-top: 13rem;
     }
     
     main {
@@ -317,14 +317,28 @@ label:before {
         width: 16%;
         top: -18rem;
     }
+    @keyframes left-right { 
+        0%   { transform: translateX(-20rem); }
+        100%  { transform: translateX(45rem); }
+    }
+    
     #cloud-middle-animation {
         animation: right-left-one 17s linear infinite;
         width: 16%;
         top: -16rem;
     }
+    @keyframes right-left-one { 
+        0%   { transform: translateX(-20rem); }
+        100%  { transform: translateX(45rem); }
+    }
+
     #cloud-bottom-animation {
         animation: right-left-two 20s linear infinite;
         width: 23%;
         top: -14rem;
+    }
+    @keyframes right-left-two { 
+        0%   { transform: translateX(-20rem); }
+        100%  { transform: translateX(45rem); }
     }
 }
