@@ -2,6 +2,7 @@ body {
     background: black;
     margin: 2rem;
     font-family: "Retro Gaming";
+    src: url('./assets/fonts/retro-gaming.ttf');
 }
 
 h1 {
