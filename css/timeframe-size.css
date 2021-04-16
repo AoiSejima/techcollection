@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Retro Gaming";
-    src: url("/css/fonts/retro-gaming.ttf") format("truetype"); 
+    src: url("/css/retro-gaming.ttf") format("truetype"); 
 }
 body {
     background: black;
