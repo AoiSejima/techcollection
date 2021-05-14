@@ -89,17 +89,6 @@ h2 {
     border: 0.3rem solid #2774CC;
 }
 
-.brand-container {
-    display: flex;
-    position: relative;
-    margin-left: 3rem;
-    margin-top: 2rem;
-    width: 20rem;
-    height: 37rem;
-    overflow-y: scroll;
-    flex-direction: column;
-}
-
 .type-container {
     margin-left: 4rem;
     margin-top: 5rem;
@@ -126,7 +115,7 @@ h3:hover {
     display: flex;
     position: fixed;
     right: 7rem;
-    bottom: 9rem;
+    bottom: 11rem;
     width: 70%;
     height: 37rem;
     overflow-x: scroll;
@@ -203,7 +192,7 @@ img {
     width: 5rem;
     height: 5rem;
     object-fit: scale-down;
-    margin-bottom: -0.6rem;
+    margin-bottom: -0.3rem;
 }
 
 img:hover {
